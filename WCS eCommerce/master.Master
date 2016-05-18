@@ -1,21 +1,21 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="master.master.cs" Inherits="WCS_eCommerce.master" %>
+﻿<%@ master language="C#" autoeventwireup="true" codebehind="master.master.cs" inherits="WCS_eCommerce.master" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Wiliams Custom Specialty</title>
+    <link href="StyleSheet1.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <asp:ContentPlaceHolder ID="cph1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-        <div>
-            Links:<br />
+        <div class="nav">
             <ul>
                 <li><a href="default.aspx">Home Page</a></li>
                 <li><a href="login.aspx">Login</a></li>
@@ -28,6 +28,9 @@
                 <li><a href="myAccount.aspx">My Account</a></li>
                 <li><a href="contact.aspx">Contact Us</a></li>
             </ul>
+        </div>
+        <div class="content">
+            <asp:ContentPlaceHolder ID="cph2" runat="server"></asp:ContentPlaceHolder>
         </div>
     </form>
 </body>
