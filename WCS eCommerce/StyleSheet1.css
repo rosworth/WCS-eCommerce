@@ -1,0 +1,28 @@
+﻿body {
+    margin: 1px;
+    padding: 1px;
+}
+
+.nav {
+    float: left;
+    width: 200px;
+}
+
+.content {
+    width: 800px;
+}
+
+a:link, a:visited {
+    color: gray;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+}
+
+ul {
+    list-style: none;
+    margin-left: 0px;
+    padding-left: 3px;
+}
