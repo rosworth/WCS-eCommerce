@@ -4,10 +4,10 @@ namespace WCS_eCommerce
 {
     public class clsDataLayer
     {
-        public static dsLogin VerifyUser(string Database, string UserName, string UserPassword)
+        public static App_Code.dsLogin VerifyUser(string Database, string UserName, string UserPassword)
         {
             // Add your comments here
-            dsLogin DS;
+            App_Code.dsLogin DS;
             OleDbConnection sqlConn;
             OleDbDataAdapter sqlDA;
             // Add your comments here
@@ -18,7 +18,7 @@ namespace WCS_eCommerce
             "WHERE UserName LIKE '" + UserName + "' " +
             "AND UserPassword LIKE '" + UserPassword + "'", sqlConn);
             // Add your comments here
-            DS = new dsLogin();
+            DS = new App_Code.dsLogin();
             // Add your comments here
             sqlDA.Fill(DS.loginInfo);
             // Add your comments here

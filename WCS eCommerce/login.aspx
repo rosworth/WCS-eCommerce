@@ -13,13 +13,15 @@
         #password {
             width: 150px;
         }
-    .auto-style3 {
-        width: 90px;
-        height: 26px;
-    }
-    .auto-style4 {
-        height: 26px;
-    }
+
+        .auto-style3 {
+            width: 90px;
+            height: 26px;
+        }
+
+        .auto-style4 {
+            height: 26px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cph1" runat="server">
@@ -30,6 +32,10 @@
 <asp:Content ContentPlaceHolderID="cph2" runat="server">
 
     <table>
+        <tr>
+            <td colspan="3"><asp:Label ID="lblLoginError" runat="server" Text="User not found" Visible="False"></asp:Label></td>
+            
+        </tr>
         <tr>
             <td class="auto-style2">Username</td>
             <td>
@@ -53,8 +59,7 @@
             <td>
                 <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="Button1_Click" />
             </td>
-            <td>
-                &nbsp;</td>
+            <td>&nbsp;</td>
         </tr>
     </table>
 

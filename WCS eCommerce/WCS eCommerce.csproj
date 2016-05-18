@@ -74,11 +74,10 @@
     <Content Include="App_Code\dsLogin.xsc">
       <DependentUpon>dsLogin.xsd</DependentUpon>
     </Content>
-    <None Include="App_Code\dsLogin.xsd">
-      <SubType>Designer</SubType>
+    <Content Include="App_Code\dsLogin.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsLogin.Designer.cs</LastGenOutput>
-    </None>
+    </Content>
     <Content Include="App_Code\dsLogin.xss">
       <DependentUpon>dsLogin.xsd</DependentUpon>
     </Content>
@@ -104,12 +103,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Code\dsLogin.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dsLogin.xsd</DependentUpon>
-    </Content>
-    <Content Include="App_Code\clsDataLayer.cs" />
+    <Compile Include="App_Code\clsDataLayer.cs" />
     <Compile Include="catalog.aspx.cs">
       <DependentUpon>catalog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -144,6 +138,11 @@
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\dsLogin.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsLogin.xsd</DependentUpon>
     </Compile>
     <Compile Include="faq.aspx.cs">
       <DependentUpon>faq.aspx</DependentUpon>

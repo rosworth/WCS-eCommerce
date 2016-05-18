@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
+using System.Data;
 using System.Web.UI.WebControls;
 
 namespace WCS_eCommerce
@@ -11,12 +8,22 @@ namespace WCS_eCommerce
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void Button1_Click(object sender, AuthenticateEventArgs e)
         {
-            
+            lblLoginError.Visible = false;
+            App_Code.dsLogin dsUserLogin;
+            dsUserLogin = clsDataLayer.VerifyUser(Server.MapPath("WCS.accdb"),
+       txtUsername.Text, txtPassword.Text);
+            // Add your comments here
+            if (dsUserLogin.loginInfo.Count < 1)
+            {
+                lblLoginError.Visible = true;
+                e.Authenticated = false;
+                return;
+            }
         }
 
     }
