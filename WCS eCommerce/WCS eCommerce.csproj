@@ -29,7 +29,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>true</Optimize>
+    <Optimize>false</Optimize>
     <OutputPath>bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -71,15 +71,16 @@
     <Content Include="App_Data\WCS.accdb" />
     <Content Include="packages.config" />
     <Content Include="master.Master" />
-    <Content Include="App_Code\dsLogin.xsc">
-      <DependentUpon>dsLogin.xsd</DependentUpon>
+    <Content Include="dsInfo.xsc">
+      <DependentUpon>dsInfo.xsd</DependentUpon>
     </Content>
-    <Content Include="App_Code\dsLogin.xsd">
+    <None Include="dsInfo.xsd">
+      <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsLogin.Designer.cs</LastGenOutput>
-    </Content>
-    <Content Include="App_Code\dsLogin.xss">
-      <DependentUpon>dsLogin.xsd</DependentUpon>
+      <LastGenOutput>dsInfo.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="dsInfo.xss">
+      <DependentUpon>dsInfo.xsd</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -139,10 +140,10 @@
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Code\dsLogin.Designer.cs">
+    <Compile Include="dsInfo.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>dsLogin.xsd</DependentUpon>
+      <DependentUpon>dsInfo.xsd</DependentUpon>
     </Compile>
     <Compile Include="faq.aspx.cs">
       <DependentUpon>faq.aspx</DependentUpon>

@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace WCS_eCommerce.App_Code {
+namespace WCS_eCommerce {
     
     
     /// <summary>
@@ -20,9 +20,9 @@ namespace WCS_eCommerce.App_Code {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("dsLogin")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dsInfo")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class dsLogin : global::System.Data.DataSet {
+    public partial class dsInfo : global::System.Data.DataSet {
         
         private loginInfoDataTable tableloginInfo;
         
@@ -30,7 +30,7 @@ namespace WCS_eCommerce.App_Code {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public dsLogin() {
+        public dsInfo() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace WCS_eCommerce.App_Code {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected dsLogin(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dsInfo(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace WCS_eCommerce.App_Code {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            dsLogin cln = ((dsLogin)(base.Clone()));
+            dsInfo cln = ((dsInfo)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace WCS_eCommerce.App_Code {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "dsLogin";
+            this.DataSetName = "dsInfo";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dsLogin.xsd";
+            this.Namespace = "http://tempuri.org/dsInfo.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableloginInfo = new loginInfoDataTable();
@@ -225,7 +225,7 @@ namespace WCS_eCommerce.App_Code {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            dsLogin ds = new dsLogin();
+            dsInfo ds = new dsInfo();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -504,7 +504,7 @@ namespace WCS_eCommerce.App_Code {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dsLogin ds = new dsLogin();
+                dsInfo ds = new dsInfo();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -680,7 +680,7 @@ namespace WCS_eCommerce.App_Code {
         }
     }
 }
-namespace WCS_eCommerce.App_Code.dsLoginTableAdapters {
+namespace WCS_eCommerce.dsInfoTableAdapters {
     
     
     /// <summary>
@@ -841,7 +841,7 @@ namespace WCS_eCommerce.App_Code.dsLoginTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        ID, username, [password]\r\nFROM            loginInfo";
+            this._commandCollection[0].CommandText = "SELECT ID, username, [password] FROM loginInfo";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -849,7 +849,7 @@ namespace WCS_eCommerce.App_Code.dsLoginTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dsLogin.loginInfoDataTable dataTable) {
+        public virtual int Fill(dsInfo.loginInfoDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -862,9 +862,9 @@ namespace WCS_eCommerce.App_Code.dsLoginTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dsLogin.loginInfoDataTable GetData() {
+        public virtual dsInfo.loginInfoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dsLogin.loginInfoDataTable dataTable = new dsLogin.loginInfoDataTable();
+            dsInfo.loginInfoDataTable dataTable = new dsInfo.loginInfoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -872,14 +872,14 @@ namespace WCS_eCommerce.App_Code.dsLoginTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dsLogin.loginInfoDataTable dataTable) {
+        public virtual int Update(dsInfo.loginInfoDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dsLogin dataSet) {
+        public virtual int Update(dsInfo dataSet) {
             return this.Adapter.Update(dataSet, "loginInfo");
         }
         
@@ -1079,7 +1079,7 @@ namespace WCS_eCommerce.App_Code.dsLoginTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(dsLogin dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(dsInfo dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._loginInfoTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.loginInfo.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1098,7 +1098,7 @@ namespace WCS_eCommerce.App_Code.dsLoginTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(dsLogin dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(dsInfo dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._loginInfoTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.loginInfo.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1116,7 +1116,7 @@ namespace WCS_eCommerce.App_Code.dsLoginTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(dsLogin dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(dsInfo dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._loginInfoTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.loginInfo.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1158,7 +1158,7 @@ namespace WCS_eCommerce.App_Code.dsLoginTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(dsLogin dataSet) {
+        public virtual int UpdateAll(dsInfo dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

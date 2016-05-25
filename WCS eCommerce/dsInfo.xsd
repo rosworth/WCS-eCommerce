@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="dsLogin" targetNamespace="http://tempuri.org/dsLogin.xsd" xmlns:mstns="http://tempuri.org/dsLogin.xsd" xmlns="http://tempuri.org/dsLogin.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="dsInfo" targetNamespace="http://tempuri.org/dsInfo.xsd" xmlns:mstns="http://tempuri.org/dsInfo.xsd" xmlns="http://tempuri.org/dsInfo.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -28,9 +28,8 @@
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        ID, username, [password]
-FROM            loginInfo</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, username, [password] FROM loginInfo</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -58,7 +57,7 @@ FROM            loginInfo</CommandText>
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="dsLogin" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsLogin" msprop:Generator_UserDSName="dsLogin">
+  <xs:element name="dsInfo" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsInfo" msprop:Generator_UserDSName="dsInfo">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="loginInfo" msprop:Generator_TableClassName="loginInfoDataTable" msprop:Generator_TableVarName="tableloginInfo" msprop:Generator_TablePropName="loginInfo" msprop:Generator_RowDeletingName="loginInfoRowDeleting" msprop:Generator_RowChangingName="loginInfoRowChanging" msprop:Generator_RowEvHandlerName="loginInfoRowChangeEventHandler" msprop:Generator_RowDeletedName="loginInfoRowDeleted" msprop:Generator_UserTableName="loginInfo" msprop:Generator_RowChangedName="loginInfoRowChanged" msprop:Generator_RowEvArgName="loginInfoRowChangeEvent" msprop:Generator_RowClassName="loginInfoRow">
