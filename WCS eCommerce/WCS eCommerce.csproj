@@ -69,6 +69,30 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\WCS.accdb" />
+    <Content Include="images\cartoons\american dad.png" />
+    <Content Include="images\cartoons\boondocks.png" />
+    <Content Include="images\cartoons\family guy.png" />
+    <Content Include="images\cartoons\south park.png" />
+    <Content Include="images\city\chicago.png" />
+    <Content Include="images\city\houston.png" />
+    <Content Include="images\city\la.png" />
+    <Content Include="images\city\miami.png" />
+    <Content Include="images\city\ny.png" />
+    <Content Include="images\Classic Cars\classics get better with age.png" />
+    <Content Include="images\Classic Cars\cobra.png" />
+    <Content Include="images\Classic Cars\Deuce.png" />
+    <Content Include="images\Classic Cars\im not old im classic.png" />
+    <Content Include="images\logo\logo.png" />
+    <Content Include="images\meme\challenge accepted.png" />
+    <Content Include="images\meme\confusion.png" />
+    <Content Include="images\meme\free-t-shirt.png" />
+    <Content Include="images\meme\harlem shake.png" />
+    <Content Include="images\meme\just do it tomorrow.png" />
+    <Content Include="images\video games\assassins creed.png" />
+    <Content Include="images\video games\battlefield.png" />
+    <Content Include="images\video games\cod.png" />
+    <Content Include="images\video games\division.png" />
+    <Content Include="images\video games\resident-evil.png" />
     <Content Include="packages.config" />
     <Content Include="master.Master" />
     <Content Include="dsInfo.xsc">
@@ -189,6 +213,7 @@
       <DependentUpon>shirtMaker.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
