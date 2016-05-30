@@ -22,13 +22,13 @@ namespace WCS_eCommerce {
         protected global::System.Web.UI.WebControls.ImageButton imgbtnCartoons;
         
         /// <summary>
-        /// LinkButton1 control.
+        /// lnkbtnCartoons control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        protected global::System.Web.UI.WebControls.LinkButton lnkbtnCartoons;
         
         /// <summary>
         /// imgbtnCity control.

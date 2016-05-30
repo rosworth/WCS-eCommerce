@@ -24,10 +24,10 @@
     <table class="auto-style1">
         <tr>
             <td class="auto-style2">
-                <asp:ImageButton ID="imgbtnCartoons" runat="server" ImageUrl="~/images/cartoons/boondocks.png" />
+                <asp:ImageButton ID="imgbtnCartoons" runat="server" ImageUrl="~/images/cartoons/boondocks.png" PostBackUrl="~/CartoonsPage.aspx" />
                 <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:LinkButton ID="LinkButton1" runat="server">LinkButton</asp:LinkButton>
+                <asp:LinkButton ID="lnkbtnCartoons" runat="server" PostBackUrl="~/CartoonsPage.aspx">Cartoons</asp:LinkButton>
             </td>
             <td class="auto-style3">
                 <asp:ImageButton ID="imgbtnCity" runat="server" ImageUrl="~/images/city/houston.png" />
