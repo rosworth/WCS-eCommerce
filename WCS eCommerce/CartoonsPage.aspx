@@ -7,7 +7,7 @@
     </p>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cph2" runat="server">
-    <form id="form1" runat="server">
+    <%--<form id="form1" runat="server">--%>
     <asp:DataList ID="DataList1" runat="server" RepeatColumns="2" CellPadding="4">
     <ItemTemplate>
         <table border="10px" cellpadding="10px" cellspacing="50px" width="200px" height="200px">
@@ -20,8 +20,8 @@
         </table>
     </ItemTemplate>
     </asp:DataList>
-    <script type="text/javascript" src="~/images/cartoons/american%20dad.png"></script>
-    <script type="text/javascript" src="~/images/cartoons/boondocks.png"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.rawgit.com/elevateweb/elevatezoom/master/jquery.elevateZoom-3.0.8.min.js"></script>
     <script type="text/javascript">
     $(function () {
         $("[id*=DataList1] img").elevateZoom({
@@ -31,5 +31,5 @@
         });
     });
     </script>
-        </form>
+       <%--//</form>--%>
 </asp:Content>

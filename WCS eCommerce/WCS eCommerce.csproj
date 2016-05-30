@@ -70,6 +70,7 @@
   <ItemGroup>
     <Content Include="App_Data\WCS.accdb" />
     <Content Include="CartoonsPage.aspx" />
+    <Content Include="citypage.aspx" />
     <Content Include="images\cartoons\american dad.png" />
     <Content Include="images\cartoons\boondocks.png" />
     <Content Include="images\cartoons\family guy.png" />
@@ -83,18 +84,27 @@
     <Content Include="images\Classic Cars\cobra.png" />
     <Content Include="images\Classic Cars\Deuce.png" />
     <Content Include="images\Classic Cars\im not old im classic.png" />
+    <Content Include="images\cartoons\large\american dad.png" />
+    <Content Include="images\cartoons\large\boondocks.png" />
+    <Content Include="images\cartoons\large\family guy.png" />
+    <Content Include="images\cartoons\large\south park.png" />
+    <Content Include="images\loading.gif" />
     <Content Include="images\logo\logo.png" />
     <Content Include="images\meme\challenge accepted.png" />
     <Content Include="images\meme\confusion.png" />
     <Content Include="images\meme\free-t-shirt.png" />
     <Content Include="images\meme\harlem shake.png" />
     <Content Include="images\meme\just do it tomorrow.png" />
+    <Content Include="images\cartoons\small\american dad.png" />
+    <Content Include="images\cartoons\small\boondocks.png" />
+    <Content Include="images\cartoons\small\family guy.png" />
+    <Content Include="images\cartoons\small\south park.png" />
     <Content Include="images\video games\assassins creed.png" />
     <Content Include="images\video games\battlefield.png" />
     <Content Include="images\video games\cod.png" />
     <Content Include="images\video games\division.png" />
     <Content Include="images\video games\resident-evil.png" />
-    <Content Include="images\cartoons\loading.gif" />
+    <Content Include="loading.gif" />
     <Content Include="packages.config" />
     <Content Include="master.Master" />
     <Content Include="dsInfo.xsc">
@@ -151,6 +161,13 @@
     </Compile>
     <Compile Include="checkout.aspx.designer.cs">
       <DependentUpon>checkout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="citypage.aspx.cs">
+      <DependentUpon>citypage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="citypage.aspx.designer.cs">
+      <DependentUpon>citypage.aspx</DependentUpon>
     </Compile>
     <Compile Include="confirm.aspx.cs">
       <DependentUpon>confirm.aspx</DependentUpon>

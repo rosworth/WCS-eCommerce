@@ -7,19 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WCS_eCommerce.Catalog_pages {
+namespace WCS_eCommerce {
     
     
-    public partial class WebForm1 {
+    public partial class citypage {
         
         /// <summary>
-        /// lblCartoons control.
+        /// lblCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCartoons;
+        protected global::System.Web.UI.WebControls.Label lblCity;
         
         /// <summary>
         /// DataList1 control.

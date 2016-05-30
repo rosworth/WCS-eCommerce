@@ -7,10 +7,9 @@ using System.Web.UI.WebControls;
 using System.IO;
 using System.Data;
 
-
-namespace WCS_eCommerce.Catalog_pages
+namespace WCS_eCommerce
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class citypage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,20 +20,15 @@ namespace WCS_eCommerce.Catalog_pages
                 new DataColumn("ImageUrl"),
                 new DataColumn("ZoomImageUrl")
         });
-                string[] filePaths = Directory.GetFiles(Server.MapPath("~/images/cartoons/"));
+                string[] filePaths = Directory.GetFiles(Server.MapPath("~/images/city/"));
                 foreach (string filePath in filePaths)
                 {
                     string fileName = Path.GetFileName(filePath);
-                    dt.Rows.Add(fileName, "~/images/cartoons/small/" + fileName, "~/images/cartoons/large/" + fileName);
+                    dt.Rows.Add(fileName, "~/images/city/" + fileName, "~/images/city/" + fileName);
                 }
                 DataList1.DataSource = dt;
                 DataList1.DataBind();
             }
-            
-
-            {
-
-            }
         }
-    }//
+    }
 }
