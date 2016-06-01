@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.OleDb;
+using System.Net;
 
 namespace WCS_eCommerce
 {
@@ -34,12 +35,12 @@ namespace WCS_eCommerce
             OleDbConnection sqlConn = new OleDbConnection("PROVIDER=Microsoft.ACE.OLEDB.12.0;" + "Data Source=" + Database);
             // Add your comments here
             comm.Connection = sqlConn;
-            comm.CommandText = "SELECT * FROM customerInfo" + "WHERE username LIKE '" + UserName + "' " + "AND password LIKE '" + UserPassword + "'";
+            comm.CommandText = "SELECT * FROM loginInfo " + "WHERE username LIKE '" + UserName + "' " + "AND password LIKE '" + UserPassword + "'";
             comm.Connection.Open();
             OleDbDataReader read = comm.ExecuteReader();
             while (read.Read())
             {
-                temp = read["firstName"].ToString();
+                temp = read["username"].ToString();
             }
             return temp;
         }
@@ -72,7 +73,7 @@ namespace WCS_eCommerce
                 conn.Close();
                 recordSaved = true;
             }
-            catch (Exception ex)
+            catch (WebException)
             {
                 // ** NEW ** Add your comments here
                 myTransaction.Rollback();
