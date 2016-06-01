@@ -71,6 +71,12 @@
     <Content Include="App_Data\WCS.accdb" />
     <Content Include="CartoonsPage.aspx" />
     <Content Include="citypage.aspx" />
+    <Content Include="CSS\default.css" />
+    <Content Include="CSS\jquery-ui.css" />
+    <Content Include="CSS\jquery.fancybox.css" />
+    <Content Include="CSS\prism.css" />
+    <Content Include="CSS\sharebar.css" />
+    <Content Include="CSS\style.css" />
     <Content Include="images\cartoons\american dad.png" />
     <Content Include="images\cartoons\boondocks.png" />
     <Content Include="images\cartoons\family guy.png" />
@@ -104,12 +110,22 @@
     <Content Include="images\video games\cod.png" />
     <Content Include="images\video games\division.png" />
     <Content Include="images\video games\resident-evil.png" />
+    <Content Include="JS Files\jquery-ui.min.js" />
+    <Content Include="JS Files\jquery.elevatezoom.min.js" />
+    <Content Include="JS Files\jquery.fancybox.pack.js" />
+    <Content Include="JS Files\jquery.min.js" />
+    <Content Include="JS Files\prism.js" />
     <Content Include="loading.gif" />
     <Content Include="packages.config" />
     <Content Include="master.Master" />
     <Content Include="dsInfo.xsc">
       <DependentUpon>dsInfo.xsd</DependentUpon>
     </Content>
+    <Content Include="Cache files\jquery-ui.min.cache" />
+    <Content Include="Cache files\jquery.elevatezoom.min.cache" />
+    <Content Include="Cache files\jquery.fancybox.pack.cache" />
+    <Content Include="Cache files\jquery.min.cache" />
+    <Content Include="Cache files\prism.cache" />
     <None Include="dsInfo.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -239,9 +255,7 @@
       <DependentUpon>shirtMaker.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Catalog pages\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
