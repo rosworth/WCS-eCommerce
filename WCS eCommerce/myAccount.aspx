@@ -5,3 +5,6 @@
     <p>
         Customer Account Page</p>
 </asp:Content>
+<asp:Content ContentPlaceHolderID="cph2" runat="server">
+
+</asp:Content>

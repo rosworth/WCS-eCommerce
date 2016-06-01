@@ -49,6 +49,15 @@ namespace WCS_eCommerce {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder cph1;
         
         /// <summary>
+        /// nameHolder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label nameHolder;
+        
+        /// <summary>
         /// cph2 control.
         /// </summary>
         /// <remarks>

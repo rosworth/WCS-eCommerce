@@ -11,6 +11,13 @@ namespace WCS_eCommerce
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            bool logged;
+            if (Session["loginStatus"] != null)
+            {
+                logged = Convert.ToBoolean(Session["loginStatus"]);
+                if (logged)
+                { nameHolder.Text = Session["name"].ToString(); }
+            }
 
         }
     }

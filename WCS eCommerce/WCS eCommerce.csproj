@@ -110,6 +110,17 @@
     <Content Include="dsInfo.xsc">
       <DependentUpon>dsInfo.xsd</DependentUpon>
     </Content>
+    <Content Include="dsCustomer.xsc">
+      <DependentUpon>dsCustomer.xsd</DependentUpon>
+    </Content>
+    <None Include="dsCustomer.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCustomer.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="dsCustomer.xss">
+      <DependentUpon>dsCustomer.xsd</DependentUpon>
+    </Content>
     <None Include="dsInfo.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -189,6 +200,11 @@
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dsCustomer.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCustomer.xsd</DependentUpon>
     </Compile>
     <Compile Include="dsInfo.Designer.cs">
       <AutoGen>True</AutoGen>
