@@ -4,10 +4,6 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-
-    
-
-
     <title>Wiliams Custom Specialty</title>
     <link href="StyleSheet1.css" rel="stylesheet" />
     <style type="text/css">
@@ -54,6 +50,12 @@
             </ul>
         </div>
         <div class="content">
+            <div class="alignR">
+                <p>
+                    Hello,
+                    <asp:Label ID="nameHolder" runat="server" Text="Guest"></asp:Label>
+                </p>
+            </div>
             <asp:ContentPlaceHolder ID="cph2" runat="server"></asp:ContentPlaceHolder>
         </div>
     </form>

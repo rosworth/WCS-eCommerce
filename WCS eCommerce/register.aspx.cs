@@ -11,7 +11,19 @@ namespace WCS_eCommerce
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            lblError.Visible = false;
+        }
 
+        protected void btnRegister_Click(object sender, EventArgs e)
+        {
+            if (clsDataLayer.RegisterUser(Server.MapPath(@"App_Data\WCS.accdb"), txtFirst.Text, txtLast.Text, txtAdd1.Text, txtAdd2.Text, txtCity.Text, ddlState.SelectedValue, txtZip.Text))
+            {
+                Response.Redirect("myAccount.aspx");
+            }
+            else
+            {
+                lblError.Visible = true;
+            }
         }
     }
 }

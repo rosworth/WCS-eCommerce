@@ -26,3 +26,7 @@ ul {
     margin-left: 0px;
     padding-left: 3px;
 }
+
+.alignR {
+    text-align: right;
+}
