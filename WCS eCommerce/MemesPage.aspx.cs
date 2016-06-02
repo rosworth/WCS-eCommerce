@@ -9,7 +9,7 @@ using System.Data;
 
 namespace WCS_eCommerce
 {
-    public partial class citypage : System.Web.UI.Page
+    public partial class MemesPage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -20,15 +20,24 @@ namespace WCS_eCommerce
                 new DataColumn("ImageUrl"),
                 new DataColumn("ZoomImageUrl")
         });
-                string[] filePaths = Directory.GetFiles(Server.MapPath("~/images/city/"));
+                string[] filePaths = Directory.GetFiles(Server.MapPath("~/images/meme/"));
                 foreach (string filePath in filePaths)
                 {
                     string fileName = Path.GetFileName(filePath);
-                    dt.Rows.Add(fileName, "~/images/city/csmall/" + fileName, "~/images/city/clarge/" + fileName);
+                    dt.Rows.Add(fileName, "~/images/meme/msmall/" + fileName, "~/images/meme/mlarge/" + fileName);
                 }
                 DataList1.DataSource = dt;
                 DataList1.DataBind();
             }
+
+
+            {
+
+
+
+
+            }
+
         }
     }
 }

@@ -36,35 +36,40 @@
         <td class="auto-style5">
             <asp:ImageButton ID="imgbtnCartoons" runat="server" ImageUrl="~/images/cartoons/boondocks.png" PostBackUrl="~/CartoonsPage.aspx" />
             <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
             <asp:LinkButton ID="lnkbtnCartoons" runat="server" PostBackUrl="~/CartoonsPage.aspx">Cartoons</asp:LinkButton>
         </td>
         <td>
-            <asp:ImageButton ID="ImageButton3" runat="server" ImageUrl="~/images/city/houston.png" />
-            <asp:LinkButton ID="LinkButton2" runat="server">LinkButton</asp:LinkButton>
+            <asp:ImageButton ID="ImageButton3" runat="server" ImageUrl="~/images/city/houston.png" PostBackUrl="~/citypage.aspx" />
+            <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:LinkButton ID="lnkbtnCity" runat="server" PostBackUrl="~/citypage.aspx">Cities</asp:LinkButton>
         </td>
     </tr>
     <tr>
         <td class="auto-style5">
-            <asp:ImageButton ID="ImageButton4" runat="server" ImageUrl="~/images/Classic Cars/classics get better with age.png" />
+            <asp:ImageButton ID="imgbtnClassic" runat="server" ImageUrl="~/images/Classic Cars/classics get better with age.png" PostBackUrl="~/ClassicCars.aspx" />
             <br />
-            <asp:LinkButton ID="LinkButton3" runat="server">LinkButton</asp:LinkButton>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:LinkButton ID="lnkbtnCCars" runat="server" PostBackUrl="~/ClassicCars.aspx">Classic Cars</asp:LinkButton>
         </td>
         <td>
-            <asp:ImageButton ID="ImageButton5" runat="server" ImageUrl="~/images/meme/confusion.png" />
+            <asp:ImageButton ID="imgbtnMeme" runat="server" ImageUrl="~/images/meme/confusion.png" PostBackUrl="~/MemesPage.aspx" />
             <br />
-            <asp:LinkButton ID="LinkButton4" runat="server">LinkButton</asp:LinkButton>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:LinkButton ID="lnkbtnMemes" runat="server" PostBackUrl="~/MemesPage.aspx">Memes</asp:LinkButton>
         </td>
     </tr>
     <tr>
         <td class="auto-style6">
-            <asp:ImageButton ID="ImageButton6" runat="server" Height="200px" ImageUrl="~/images/video games/division.png" Width="200px" />
+            <asp:ImageButton ID="ImageButton6" runat="server" Height="200px" ImageUrl="~/images/video games/division.png" Width="200px" PostBackUrl="~/VideoGamesPage.aspx" />
             <br />
-            <asp:LinkButton ID="LinkButton5" runat="server">LinkButton</asp:LinkButton>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:LinkButton ID="lnkbtnVGames" runat="server" PostBackUrl="~/VideoGamesPage.aspx">Video Games</asp:LinkButton>
         </td>
         <td class="auto-style7">
             <asp:ImageButton ID="ImageButton7" runat="server" />
-            <asp:LinkButton ID="LinkButton6" runat="server">LinkButton</asp:LinkButton>
+            <asp:LinkButton ID="lnkbtnCustom" runat="server" PostBackUrl="~/shirtMaker.aspx">MAKE A CUSTOM SHIRT HERE! =D</asp:LinkButton>
         </td>
     </tr>
 </table>

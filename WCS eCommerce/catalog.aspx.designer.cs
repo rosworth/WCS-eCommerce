@@ -40,49 +40,49 @@ namespace WCS_eCommerce {
         protected global::System.Web.UI.WebControls.ImageButton ImageButton3;
         
         /// <summary>
-        /// LinkButton2 control.
+        /// lnkbtnCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton2;
+        protected global::System.Web.UI.WebControls.LinkButton lnkbtnCity;
         
         /// <summary>
-        /// ImageButton4 control.
+        /// imgbtnClassic control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton4;
+        protected global::System.Web.UI.WebControls.ImageButton imgbtnClassic;
         
         /// <summary>
-        /// LinkButton3 control.
+        /// lnkbtnCCars control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton3;
+        protected global::System.Web.UI.WebControls.LinkButton lnkbtnCCars;
         
         /// <summary>
-        /// ImageButton5 control.
+        /// imgbtnMeme control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton5;
+        protected global::System.Web.UI.WebControls.ImageButton imgbtnMeme;
         
         /// <summary>
-        /// LinkButton4 control.
+        /// lnkbtnMemes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton4;
+        protected global::System.Web.UI.WebControls.LinkButton lnkbtnMemes;
         
         /// <summary>
         /// ImageButton6 control.
@@ -94,13 +94,13 @@ namespace WCS_eCommerce {
         protected global::System.Web.UI.WebControls.ImageButton ImageButton6;
         
         /// <summary>
-        /// LinkButton5 control.
+        /// lnkbtnVGames control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton5;
+        protected global::System.Web.UI.WebControls.LinkButton lnkbtnVGames;
         
         /// <summary>
         /// ImageButton7 control.
@@ -112,12 +112,12 @@ namespace WCS_eCommerce {
         protected global::System.Web.UI.WebControls.ImageButton ImageButton7;
         
         /// <summary>
-        /// LinkButton6 control.
+        /// lnkbtnCustom control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton6;
+        protected global::System.Web.UI.WebControls.LinkButton lnkbtnCustom;
     }
 }

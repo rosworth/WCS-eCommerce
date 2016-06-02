@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master.Master" AutoEventWireup="true" CodeBehind="citypage.aspx.cs" Inherits="WCS_eCommerce.citypage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master.Master" AutoEventWireup="true" CodeBehind="ClassicCars.aspx.cs" Inherits="WCS_eCommerce.ClassicCars" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-     <link href="CSS/style.css" type="text/css" media="all" rel="stylesheet"/>
+    <link href="CSS/style.css" type="text/css" media="all" rel="stylesheet"/>
     <link href="CSS/jquery-ui.css" rel="stylesheet" type="text/css" />
     <link href="CSS/default.css" rel="stylesheet" />
     <link href="CSS/jquery.fancybox.css" rel="stylesheet" />
@@ -21,7 +21,6 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cph1" runat="server">
-    <asp:Label ID="lblCity" runat="server" Text="Cities"></asp:Label>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cph2" runat="server">
     <asp:DataList ID="DataList1" runat="server" CellPadding="4" RepeatColumns="2">
@@ -36,5 +35,4 @@
             </table>
         </ItemTemplate>
     </asp:DataList>
-     
 </asp:Content>
