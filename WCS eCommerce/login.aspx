@@ -30,37 +30,38 @@
     </p>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="cph2" runat="server">
+    <asp:Panel runat="server" DefaultButton="btnLogin">
+        <table>
+            <tr>
+                <td colspan="3">
+                    <asp:Label ID="lblLoginError" runat="server" Text="User not found" Visible="False"></asp:Label></td>
 
-    <table>
-        <tr>
-            <td colspan="3"><asp:Label ID="lblLoginError" runat="server" Text="User not found" Visible="False"></asp:Label></td>
-            
-        </tr>
-        <tr>
-            <td class="auto-style2">Username</td>
-            <td>
-                <asp:TextBox ID="txtUsername" runat="server"></asp:TextBox>
-            </td>
-            <td>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUsername" ErrorMessage="Username is required"></asp:RequiredFieldValidator>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style3">Password</td>
-            <td class="auto-style4">
-                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
-            </td>
-            <td class="auto-style4">
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Password is required" ControlToValidate="txtPassword"></asp:RequiredFieldValidator>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td>
-                <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="Button1_Click" />
-            </td>
-            <td>&nbsp;</td>
-        </tr>
-    </table>
-
+            </tr>
+            <tr>
+                <td class="auto-style2">Username</td>
+                <td>
+                    <asp:TextBox ID="txtUsername" runat="server"></asp:TextBox>
+                </td>
+                <td>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUsername" ErrorMessage="Username is required"></asp:RequiredFieldValidator>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3">Password</td>
+                <td class="auto-style4">
+                    <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
+                </td>
+                <td class="auto-style4">
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Password is required" ControlToValidate="txtPassword"></asp:RequiredFieldValidator>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">&nbsp;</td>
+                <td>
+                    <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="Button1_Click" />
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+    </asp:Panel>
 </asp:Content>

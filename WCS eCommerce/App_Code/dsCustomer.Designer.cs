@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace WCS_eCommerce {
+namespace WCS_eCommerce.App_Code {
     
     
     /// <summary>
@@ -895,7 +895,7 @@ namespace WCS_eCommerce {
         }
     }
 }
-namespace WCS_eCommerce.dsCustomerTableAdapters {
+namespace WCS_eCommerce.App_Code.dsCustomerTableAdapters {
     
     
     /// <summary>

@@ -14,7 +14,7 @@ namespace WCS_eCommerce.Catalog_pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-             if (!this.IsPostBack)
+            if (!this.IsPostBack)
             {
                 DataTable dt = new DataTable();
                 dt.Columns.AddRange(new DataColumn[3] { new DataColumn("ImageName"),

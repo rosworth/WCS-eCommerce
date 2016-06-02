@@ -161,6 +161,17 @@
     <Content Include="dsInfo.xsc">
       <DependentUpon>dsInfo.xsd</DependentUpon>
     </Content>
+    <Content Include="App_Code\dsCustomer.xsc">
+      <DependentUpon>dsCustomer.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Code\dsCustomer.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCustomer.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="App_Code\dsCustomer.xss">
+      <DependentUpon>dsCustomer.xsd</DependentUpon>
+    </Content>
     <None Include="dsInfo.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -187,12 +198,17 @@
     <Content Include="myAccount.aspx" />
     <Content Include="register.aspx" />
     <Content Include="shirtMaker.aspx" />
-    <Content Include="StyleSheet1.css" />
+    <Content Include="CSS\StyleSheet1.css" />
     <Content Include="VideoGamesPage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\clsDataLayer.cs" />
+    <Content Include="App_Code\dsCustomer.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCustomer.xsd</DependentUpon>
+    </Content>
     <Compile Include="catalog.aspx.cs">
       <DependentUpon>catalog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -248,11 +264,6 @@
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="dsCustomer.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dsCustomer.xsd</DependentUpon>
     </Compile>
     <Compile Include="dsInfo.Designer.cs">
       <AutoGen>True</AutoGen>

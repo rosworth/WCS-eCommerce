@@ -28,7 +28,24 @@ namespace WCS_eCommerce
             return DS;
         }
 
-        public static string GetFirstName(string Database, string UserName, string UserPassword)
+        public static string GetFirstName(string Database, string customerID)
+        {
+            string temp = "";
+            OleDbCommand comm = new OleDbCommand();
+            OleDbConnection sqlConn = new OleDbConnection("PROVIDER=Microsoft.ACE.OLEDB.12.0;" + "Data Source=" + Database);
+            // Add your comments here
+            comm.Connection = sqlConn;
+            comm.CommandText = "SELECT * FROM customerInfo " + "WHERE customerID LIKE '" + customerID + "'";
+            comm.Connection.Open();
+            OleDbDataReader read = comm.ExecuteReader();
+            while (read.Read())
+            {
+                temp = read["firstName"].ToString();
+            }
+            return temp;
+        }
+
+        public static string GetCustomerID(string Database, string UserName, string UserPassword)
         {
             string temp = "";
             OleDbCommand comm = new OleDbCommand();
@@ -40,7 +57,7 @@ namespace WCS_eCommerce
             OleDbDataReader read = comm.ExecuteReader();
             while (read.Read())
             {
-                temp = read["username"].ToString();
+                temp = read["customerID"].ToString();
             }
             return temp;
         }

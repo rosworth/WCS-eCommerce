@@ -1,23 +1,24 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master.Master" AutoEventWireup="true" CodeBehind="MemesPage.aspx.cs" Inherits="WCS_eCommerce.MemesPage" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="CSS/style.css" type="text/css" media="all" rel="stylesheet"/>
+    <link href="CSS/style.css" type="text/css" media="all" rel="stylesheet" />
     <link href="CSS/jquery-ui.css" rel="stylesheet" type="text/css" />
     <link href="CSS/default.css" rel="stylesheet" />
     <link href="CSS/jquery.fancybox.css" rel="stylesheet" />
-    <link href="CSS/sharebar.css" rel="stylesheet" id='d4p-bbtools-css-css' type='text/css' media='all'/>
+    <link href="CSS/sharebar.css" rel="stylesheet" id='d4p-bbtools-css-css' type='text/css' media='all' />
     <script src="JS%20Files/jquery.min.js" type="text/javascript"></script>
-    <script src="JS%20Files/jquery-ui.min.js" type="text/javascript" ></script>
+    <script src="JS%20Files/jquery-ui.min.js" type="text/javascript"></script>
     <script src="JS%20Files/jquery.elevatezoom.min.js" type="text/javascript"></script>
     <script src="JS%20Files/jquery.fancybox.pack.js" type="text/javascript"></script>
     <script src="JS%20Files/prism.js" type="text/javascript"></script>
     <link href="CSS/prism.css" rel="stylesheet" type="text/javascript" />
     <script type="text/javascript">
-    $(function () {
-        $("[id*=DataList1] img").elevateZoom({
-            cursor: 'pointer',
-            zoomWindowPosition: 1
-        }); 
-    });
+        $(function () {
+            $("[id*=DataList1] img").elevateZoom({
+                cursor: 'pointer',
+                zoomWindowPosition: 1
+            });
+        });
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cph1" runat="server">
@@ -29,7 +30,7 @@
                 <tr>
                     <td align="center">
                         <img src='<%# ResolveUrl(Eval("ImageUrl").ToString()) %>' alt=""
-                    data-zoom-image='<%# ResolveUrl(Eval("ZoomImageUrl").ToString()) %>' />
+                            data-zoom-image='<%# ResolveUrl(Eval("ZoomImageUrl").ToString()) %>' />
                     </td>
                 </tr>
             </table>

@@ -24,7 +24,8 @@ namespace WCS_eCommerce
             else
             {
                 Session["loginStatus"] = true;
-                Session["name"] = clsDataLayer.GetFirstName(Server.MapPath(@"App_Data\WCS.accdb"), txtUsername.Text, txtPassword.Text);
+                Session["customerID"] = clsDataLayer.GetCustomerID(Server.MapPath(@"App_Data\WCS.accdb"), txtUsername.Text, txtPassword.Text);
+                Session["name"] = clsDataLayer.GetFirstName(Server.MapPath(@"App_Data\WCS.accdb"), Session["customerID"].ToString());
                 Response.Redirect("myAccount.aspx");
             }
         }

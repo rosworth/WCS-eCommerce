@@ -9,7 +9,11 @@
 }
 
 .content {
-    width: 800px;
+    width: 1000px;
+}
+
+#cph2 {
+    width: 990px;
 }
 
 a:link, a:visited {
