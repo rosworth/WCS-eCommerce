@@ -7,34 +7,27 @@ namespace WCS_eCommerce
 {
     public class clsDataLayer
     {
-        public static dsInfo VerifyUser(string Database, string UserName, string UserPassword)
+        public static dsInfo VerifyUser(string UserName, string UserPassword)
         {
-            // Add your comments here
             dsInfo DS;
-            OleDbConnection sqlConn;
             OleDbDataAdapter sqlDA;
-            // Add your comments here
-            sqlConn = new OleDbConnection("PROVIDER=Microsoft.ACE.OLEDB.12.0;" +
-            "Data Source=" + Database);
-            // Add your comments here
+            OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" +
+                "Data Source=H:\\DeVry\\CIS470\\website\\WCS-eCommerce\\WCS eCommerce\\App_Data\\WCS.accdb");
             sqlDA = new OleDbDataAdapter("SELECT * FROM loginInfo " +
             "WHERE username LIKE '" + UserName + "' " +
-            "AND password LIKE '" + UserPassword + "'", sqlConn);
-            // Add your comments here
+            "AND password LIKE '" + UserPassword + "'", conn);
             DS = new dsInfo();
-            // Add your comments here
             sqlDA.Fill(DS.loginInfo);
-            // Add your comments here
             return DS;
         }
 
-        public static string GetFirstName(string Database, string customerID)
+        public static string GetFirstName(string customerID)
         {
             string temp = "";
             OleDbCommand comm = new OleDbCommand();
-            OleDbConnection sqlConn = new OleDbConnection("PROVIDER=Microsoft.ACE.OLEDB.12.0;" + "Data Source=" + Database);
-            // Add your comments here
-            comm.Connection = sqlConn;
+            OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" +
+                "Data Source=H:\\DeVry\\CIS470\\website\\WCS-eCommerce\\WCS eCommerce\\App_Data\\WCS.accdb");
+            comm.Connection = conn;
             comm.CommandText = "SELECT * FROM customerInfo " + "WHERE customerID LIKE '" + customerID + "'";
             comm.Connection.Open();
             OleDbDataReader read = comm.ExecuteReader();
@@ -45,13 +38,13 @@ namespace WCS_eCommerce
             return temp;
         }
 
-        public static string GetCustomerID(string Database, string UserName, string UserPassword)
+        public static string GetCustomerID(string UserName, string UserPassword)
         {
             string temp = "";
             OleDbCommand comm = new OleDbCommand();
-            OleDbConnection sqlConn = new OleDbConnection("PROVIDER=Microsoft.ACE.OLEDB.12.0;" + "Data Source=" + Database);
-            // Add your comments here
-            comm.Connection = sqlConn;
+            OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" +
+                "Data Source=H:\\DeVry\\CIS470\\website\\WCS-eCommerce\\WCS eCommerce\\App_Data\\WCS.accdb");
+            comm.Connection = conn;
             comm.CommandText = "SELECT * FROM loginInfo " + "WHERE username LIKE '" + UserName + "' " + "AND password LIKE '" + UserPassword + "'";
             comm.Connection.Open();
             OleDbDataReader read = comm.ExecuteReader();
@@ -62,37 +55,44 @@ namespace WCS_eCommerce
             return temp;
         }
 
-        public static bool RegisterUser(string Database, string FirstName, string LastName, string Address1, string Address2, string City, string State, string Zip)
+        public static bool RegisterUser(string Username, string Password, string FirstName, string LastName, string Address1, string Address2, string City, string State, string Zip)
         {
             bool recordSaved;
-            // ** NEW ** Add your comments here
             OleDbTransaction myTransaction = null;
             try
             {
-                // Add your comments here
-                OleDbConnection conn = new OleDbConnection("PROVIDER=Microsoft.ACE.OLEDB.12.0;" + "Data Source=" + Database);
+                OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" +
+                    "Data Source=H:\\DeVry\\CIS470\\website\\WCS-eCommerce\\WCS eCommerce\\App_Data\\WCS.accdb");
                 conn.Open();
-                OleDbCommand command = conn.CreateCommand();
-                string strSQL;
-                // ** NEW ** Add your comments here
+                string strSQL2 = "INSERT INTO loginInfo (username, password) "
+                   + "VALUES (?, ?)";
+                OleDbCommand command2 = new OleDbCommand(strSQL2, conn);
                 myTransaction = conn.BeginTransaction();
+                command2.Transaction = myTransaction;
+                command2.Parameters.AddWithValue("@username", Username);
+                command2.Parameters.AddWithValue("password", Password);
+                command2.ExecuteNonQuery();
+
+                string strSQL = "INSERT INTO customerInfo (customerID, firstName, lastName, address1, address2, city, state, zip) "
+                    + "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+                OleDbCommand command = new OleDbCommand(strSQL, conn);
                 command.Transaction = myTransaction;
-                // Add your comments here
-                strSQL = "INSERT INTO customerInfo VALUES ('" + FirstName + "', '" + LastName + "', '" + Address1 + "', '" + Address2 + "', '" + City + "', '" + State + "', '" + Zip + "')";
-                // Add your comments here
-                command.CommandType = CommandType.Text;
-                command.CommandText = strSQL;
-                // Add your comments here
+                command.Parameters.AddWithValue("@customerID", GetCustomerID(Username, Password));
+                command.Parameters.AddWithValue("@firstName", FirstName);
+                command.Parameters.AddWithValue("@lastName", LastName);
+                command.Parameters.AddWithValue("@address1", Address1);
+                command.Parameters.AddWithValue("@address2", Address2);
+                command.Parameters.AddWithValue("@city", City);
+                command.Parameters.AddWithValue("@state", State);
+                command.Parameters.AddWithValue("@zip", Zip);
                 command.ExecuteNonQuery();
-                // ** NEW ** Add your comments here
+
                 myTransaction.Commit();
-                // Add your comments here
                 conn.Close();
                 recordSaved = true;
             }
             catch (WebException)
             {
-                // ** NEW ** Add your comments here
                 myTransaction.Rollback();
                 recordSaved = false;
             }
