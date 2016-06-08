@@ -7,12 +7,11 @@ namespace WCS_eCommerce
 {
     public class clsDataLayer
     {
-        public static dsInfo VerifyUser(string UserName, string UserPassword)
+        public static dsInfo VerifyUser(string database, string UserName, string UserPassword)
         {
             dsInfo DS;
             OleDbDataAdapter sqlDA;
-            OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" +
-                "Data Source=H:\\DeVry\\CIS470\\website\\WCS-eCommerce\\WCS eCommerce\\App_Data\\WCS.accdb");
+            OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + database);
             sqlDA = new OleDbDataAdapter("SELECT * FROM loginInfo " +
             "WHERE username LIKE '" + UserName + "' " +
             "AND password LIKE '" + UserPassword + "'", conn);
@@ -21,12 +20,11 @@ namespace WCS_eCommerce
             return DS;
         }
 
-        public static string GetFirstName(string customerID)
+        public static string GetFirstName(string database, string customerID)
         {
             string temp = "";
             OleDbCommand comm = new OleDbCommand();
-            OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" +
-                "Data Source=H:\\DeVry\\CIS470\\website\\WCS-eCommerce\\WCS eCommerce\\App_Data\\WCS.accdb");
+            OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + database);
             comm.Connection = conn;
             comm.CommandText = "SELECT * FROM customerInfo " + "WHERE customerID LIKE '" + customerID + "'";
             comm.Connection.Open();
@@ -38,12 +36,11 @@ namespace WCS_eCommerce
             return temp;
         }
 
-        public static string GetCustomerID(string UserName, string UserPassword)
+        public static string GetCustomerID(string database, string UserName, string UserPassword)
         {
             string temp = "";
             OleDbCommand comm = new OleDbCommand();
-            OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" +
-                "Data Source=H:\\DeVry\\CIS470\\website\\WCS-eCommerce\\WCS eCommerce\\App_Data\\WCS.accdb");
+            OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + database);
             comm.Connection = conn;
             comm.CommandText = "SELECT * FROM loginInfo " + "WHERE username LIKE '" + UserName + "' " + "AND password LIKE '" + UserPassword + "'";
             comm.Connection.Open();
@@ -55,24 +52,23 @@ namespace WCS_eCommerce
             return temp;
         }
 
-        public static bool RegisterUser(string Username, string Password, string FirstName, string LastName, string Address1, string Address2, string City, string State, string Zip)
+        public static bool RegisterUser(string database, string Username, string Password, string FirstName, string LastName, string Address1, string Address2, string City, string State, string Zip)
         {
             bool recordSaved;
             OleDbTransaction myTransaction = null;
             try
             {
-                OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" +
-                    "Data Source=H:\\DeVry\\CIS470\\website\\WCS-eCommerce\\WCS eCommerce\\App_Data\\WCS.accdb");
+                OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + database);
                 conn.Open();
                 string strSQL2 = "INSERT INTO loginInfo (username, password) "
                    + "VALUES (?, ?)";
                 OleDbCommand command2 = new OleDbCommand(strSQL2, conn);
                 myTransaction = conn.BeginTransaction();
                 command2.Transaction = myTransaction;
-                command2.Parameters.AddWithValue("@username", Username);
+                command2.Parameters.AddWithValue("username", Username);
                 command2.Parameters.AddWithValue("password", Password);
                 command2.ExecuteNonQuery();
-
+                /*
                 string strSQL = "INSERT INTO customerInfo (customerID, firstName, lastName, address1, address2, city, state, zip) "
                     + "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
                 OleDbCommand command = new OleDbCommand(strSQL, conn);
@@ -86,7 +82,7 @@ namespace WCS_eCommerce
                 command.Parameters.AddWithValue("@state", State);
                 command.Parameters.AddWithValue("@zip", Zip);
                 command.ExecuteNonQuery();
-
+                */
                 myTransaction.Commit();
                 conn.Close();
                 recordSaved = true;

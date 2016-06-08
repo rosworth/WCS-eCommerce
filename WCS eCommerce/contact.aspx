@@ -34,6 +34,15 @@
                 </td>
             </tr>
             <tr>
+                <td>E-mail Address</td>
+                <td>
+                    <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+                </td>
+                <td>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtEmail" ErrorMessage="Invalid e-mail address" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                </td>
+            </tr>
+            <tr>
                 <td>Category</td>
                 <td>
                     <asp:DropDownList ID="category" runat="server">

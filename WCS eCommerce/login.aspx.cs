@@ -14,7 +14,7 @@ namespace WCS_eCommerce
             lblLoginError.Visible = false;
             dsInfo dsUserLogin;
             //App_Code.dsLogin dsUserLogin;
-            dsUserLogin = clsDataLayer.VerifyUser(txtUsername.Text, txtPassword.Text);
+            dsUserLogin = clsDataLayer.VerifyUser(Server.MapPath(@"App_Data\WCS.accdb"), txtUsername.Text, txtPassword.Text);
             // Add your comments here
             if (dsUserLogin.loginInfo.Count < 1)
             {
@@ -24,8 +24,8 @@ namespace WCS_eCommerce
             else
             {
                 Session["loginStatus"] = true;
-                Session["customerID"] = clsDataLayer.GetCustomerID(txtUsername.Text, txtPassword.Text);
-                Session["name"] = clsDataLayer.GetFirstName(Session["customerID"].ToString());
+                Session["customerID"] = clsDataLayer.GetCustomerID(Server.MapPath(@"App_Data\WCS.accdb"), txtUsername.Text, txtPassword.Text);
+                Session["name"] = clsDataLayer.GetFirstName(Server.MapPath(@"App_Data\WCS.accdb"), Session["customerID"].ToString());
                 Response.Redirect("myAccount.aspx");
             }
         }
