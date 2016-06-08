@@ -11,7 +11,11 @@ namespace WCS_eCommerce
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            bool logged = bool.Parse(Session["loginStatus"].ToString());
+            if (!logged)
+            {
+                Response.Redirect("login.aspx");
+            }
         }
     }
 }

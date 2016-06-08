@@ -1,11 +1,24 @@
 ﻿body {
-    margin: 1px;
-    padding: 1px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    display: inline-block;
+}
+
+#logo {
+    width: 305px;
 }
 
 .nav {
-    float: left;
-    width: 200px;
+    margin: 2px;
+    border: 2px solid black;
 }
 
 .content {
@@ -27,8 +40,27 @@ a:hover {
 
 ul {
     list-style: none;
-    margin-left: 0px;
-    padding-left: 3px;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+ul ul {
+    position: absolute;
+    display: none;
+}
+
+li:hover ul {
+    display: block;
+}
+
+li {
+    display: inline-block;
+    position: relative;
+    width: 90px;
+    height: 30px;
+    border: 2px solid black;
+    margin: 1px;
 }
 
 .alignR {

@@ -40,15 +40,6 @@ namespace WCS_eCommerce {
         protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
         
         /// <summary>
-        /// cph1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cph1;
-        
-        /// <summary>
         /// nameHolder control.
         /// </summary>
         /// <remarks>

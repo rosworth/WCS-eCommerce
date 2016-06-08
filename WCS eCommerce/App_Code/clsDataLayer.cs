@@ -60,20 +60,21 @@ namespace WCS_eCommerce
             {
                 OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + database);
                 conn.Open();
-                string strSQL2 = "INSERT INTO loginInfo (username, password) "
-                   + "VALUES (?, ?)";
+                string strSQL2 = "INSERT INTO loginInfo ([username], [password]) VALUES (?, ?)";
                 OleDbCommand command2 = new OleDbCommand(strSQL2, conn);
                 myTransaction = conn.BeginTransaction();
                 command2.Transaction = myTransaction;
-                command2.Parameters.AddWithValue("username", Username);
-                command2.Parameters.AddWithValue("password", Password);
+                command2.Parameters.AddWithValue("@username", Username);
+                command2.Parameters.AddWithValue("@password", Password);
                 command2.ExecuteNonQuery();
-                /*
+                myTransaction.Commit();
+
+                myTransaction = conn.BeginTransaction();
                 string strSQL = "INSERT INTO customerInfo (customerID, firstName, lastName, address1, address2, city, state, zip) "
                     + "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
                 OleDbCommand command = new OleDbCommand(strSQL, conn);
                 command.Transaction = myTransaction;
-                command.Parameters.AddWithValue("@customerID", GetCustomerID(Username, Password));
+                command.Parameters.AddWithValue("@customerID", GetCustomerID(database, Username, Password));
                 command.Parameters.AddWithValue("@firstName", FirstName);
                 command.Parameters.AddWithValue("@lastName", LastName);
                 command.Parameters.AddWithValue("@address1", Address1);
@@ -82,7 +83,7 @@ namespace WCS_eCommerce
                 command.Parameters.AddWithValue("@state", State);
                 command.Parameters.AddWithValue("@zip", Zip);
                 command.ExecuteNonQuery();
-                */
+
                 myTransaction.Commit();
                 conn.Close();
                 recordSaved = true;

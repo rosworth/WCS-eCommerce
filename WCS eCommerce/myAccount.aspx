@@ -7,8 +7,7 @@
 </asp:Content>
 <asp:Content ContentPlaceHolderID="cph2" runat="server">
     Account Info
-    <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataSourceID="SqlDataSource1" GridLines="Horizontal">
-        <AlternatingRowStyle BackColor="#F7F7F7" />
+    <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
         <Columns>
             <asp:BoundField DataField="firstName" HeaderText="First Name" SortExpression="firstName" />
             <asp:BoundField DataField="lastName" HeaderText="Last Name" SortExpression="lastName" />
@@ -18,15 +17,6 @@
             <asp:BoundField DataField="state" HeaderText="State" SortExpression="state" />
             <asp:BoundField DataField="zip" HeaderText="Zip" SortExpression="zip" />
         </Columns>
-        <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
-        <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />
-        <PagerStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" HorizontalAlign="Right" />
-        <RowStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" />
-        <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="#F7F7F7" />
-        <SortedAscendingCellStyle BackColor="#F4F4FD" />
-        <SortedAscendingHeaderStyle BackColor="#5A4C9D" />
-        <SortedDescendingCellStyle BackColor="#D8D8F0" />
-        <SortedDescendingHeaderStyle BackColor="#3E3277" />
     </asp:GridView>
     <br />
     Order History<br />

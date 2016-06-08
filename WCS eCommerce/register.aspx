@@ -2,11 +2,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="cph1" runat="server">
-    <p>
-        Registration
-    </p>
-</asp:Content>
 <asp:Content ContentPlaceHolderID="cph2" runat="server">
     <asp:Panel runat="server" DefaultButton="btnRegister">
         <table class="auto-style1">
@@ -39,7 +34,9 @@
                 <td>
                     <asp:TextBox ID="txtFirst" runat="server"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtFirst" ErrorMessage="First name is required"></asp:RequiredFieldValidator>
+                </td>
             </tr>
             <tr>
                 <td>
@@ -48,7 +45,9 @@
                 <td>
                     <asp:TextBox ID="txtLast" runat="server"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtLast" ErrorMessage="Last name is required"></asp:RequiredFieldValidator>
+                </td>
             </tr>
             <tr>
                 <td>
