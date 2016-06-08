@@ -1,0 +1,14 @@
+﻿Opening repositories:
+C:\Users\Daniel\Source\Repos\WCS-eCommerce
+Opening repositories:
+C:\Users\Daniel\Source\Repos\WCS-eCommerce2
+Error encountered while pushing to the remote repository: Response status code does not indicate success: 403 (Forbidden).
+Error encountered while pushing to the remote repository: Response status code does not indicate success: 403 (Forbidden).
+Commit 7597c72a created locally in repository C:\Users\Daniel\Source\Repos\WCS-eCommerce2
+Error encountered while pushing to the remote repository: Response status code does not indicate success: 403 (Forbidden).
+Error encountered while pushing to the remote repository: Response status code does not indicate success: 403 (Forbidden).
+Error encountered while pushing to the remote repository: Response status code does not indicate success: 403 (Forbidden).
+Error encountered while pushing to the remote repository: Response status code does not indicate success: 403 (Forbidden).
+Error encountered while pushing to the remote repository: Response status code does not indicate success: 403 (Forbidden).
+Error encountered while pushing to the remote repository: Response status code does not indicate success: 403 (Forbidden).
+Error encountered while pushing to the remote repository: Response status code does not indicate success: 403 (Forbidden).
