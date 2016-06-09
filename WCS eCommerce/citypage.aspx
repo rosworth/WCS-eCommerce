@@ -21,12 +21,15 @@
         });
     </script>
 </asp:Content>
+<%--<asp:Content ID="Content2" ContentPlaceHolderID="cph1" runat="server">
+    <asp:Label ID="lblCity" runat="server" Text="Cities"></asp:Label>
+</asp:Content>--%>
 <asp:Content ID="Content3" ContentPlaceHolderID="cph2" runat="server">
-    <asp:DataList ID="DataList1" runat="server" CellPadding="4" RepeatColumns="2">
+   <asp:DataList ID="DataList1" runat="server" RepeatColumns="2" CellPadding="4">
         <ItemTemplate>
-            <table border="10px" cellpadding="10px" cellspacing="50px" height="200px" width="200px">
+            <table border="1px" cellpadding="1px" cellspacing="1px" width="100px" height="100px">
                 <tr>
-                    <td align="center">
+                    <td style="width: 100px; height: 100px">
                         <img src='<%# ResolveUrl(Eval("ImageUrl").ToString()) %>' alt=""
                             data-zoom-image='<%# ResolveUrl(Eval("ZoomImageUrl").ToString()) %>' />
                     </td>

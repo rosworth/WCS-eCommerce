@@ -28,7 +28,14 @@
         }
     </style>
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="cph2" runat="server">
+<%--<asp:Content ID="Content2" ContentPlaceHolderID="cph1" runat="server">
+    <p>
+        Catalog
+    </p>
+
+</asp:Content>--%>
+<asp:Content ID="Content" ContentPlaceHolderID="cph2" runat="server">
+
     <table class="auto-style4">
         <tr>
             <td class="auto-style5">

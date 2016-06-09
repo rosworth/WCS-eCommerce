@@ -21,6 +21,11 @@
         });
     </script>
 </asp:Content>
+<%--<asp:Content ID="Content2" ContentPlaceHolderID="cph1" runat="server">
+    <p>
+        <asp:Label ID="lblCartoons" runat="server" Text="Cartoons"></asp:Label>
+    </p>
+</asp:Content>--%>
 <asp:Content ID="Content3" ContentPlaceHolderID="cph2" runat="server">
     <asp:DataList ID="DataList1" runat="server" RepeatColumns="2" CellPadding="4">
         <ItemTemplate>

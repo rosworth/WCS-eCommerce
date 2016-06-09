@@ -24,7 +24,7 @@ namespace WCS_eCommerce
                 foreach (string filePath in filePaths)
                 {
                     string fileName = Path.GetFileName(filePath);
-                    dt.Rows.Add(fileName, "~/images/cartoons/video games/vgsmall/" + fileName, "~/images/video games/vglarge/" + fileName);
+                    dt.Rows.Add(fileName, "~/images/video games/vgsmall/" + fileName, "~/images/video games/vglarge/" + fileName);
                 }
                 DataList1.DataSource = dt;
                 DataList1.DataBind();

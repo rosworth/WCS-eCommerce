@@ -21,12 +21,14 @@
         });
     </script>
 </asp:Content>
+<%--<asp:Content ID="Content2" ContentPlaceHolderID="cph1" runat="server">
+</asp:Content>--%>
 <asp:Content ID="Content3" ContentPlaceHolderID="cph2" runat="server">
-    <asp:DataList ID="DataList1" runat="server" CellPadding="4" RepeatColumns="2">
+    <asp:DataList ID="DataList1" runat="server" RepeatColumns="5" CellPadding="4">
         <ItemTemplate>
-            <table border="10px" cellpadding="10px" cellspacing="50px" height="200px" width="200px">
+            <table border="1px" cellpadding="1px" cellspacing="1px" width="100px" height="100px">
                 <tr>
-                    <td align="center">
+                    <td style="width: 200px; height: 100px">
                         <img src='<%# ResolveUrl(Eval("ImageUrl").ToString()) %>' alt=""
                             data-zoom-image='<%# ResolveUrl(Eval("ZoomImageUrl").ToString()) %>' />
                     </td>
@@ -34,4 +36,56 @@
             </table>
         </ItemTemplate>
     </asp:DataList>
+    <div>
+
+        <table class="ui-accordion">
+            <tr>
+                <td class="auto-style3" style="width: 200px">
+                    <asp:Label ID="Label1" runat="server" ForeColor="White" Text="Label"></asp:Label>
+                </td>
+                <td class="auto-style3" style="width: 200px">
+                    <asp:Label ID="Label3" runat="server" ForeColor="White" Text="Label"></asp:Label>
+                </td>
+                <td class="auto-style3" style="width: 200px">
+                    <asp:Label ID="Label4" runat="server" ForeColor="White" Text="Label"></asp:Label>
+                </td>
+                <td class="auto-style3" style="width: 200px">
+                    <asp:Label ID="Label5" runat="server" ForeColor="White" Text="Label"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3" style="width: 200px">&nbsp;</td>
+                <td class="auto-style3" style="width: 200px">&nbsp;</td>
+                <td class="auto-style3" style="width: 200px">&nbsp;</td>
+                <td class="auto-style3" style="width: 200px">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style3" style="width: 200px">
+                    <asp:Label ID="lblQuantity1" runat="server" ForeColor="White" Text="Quantity"></asp:Label>
+                </td>
+                <td class="auto-style3" style="width: 200px">
+                    <asp:Label ID="Label6" runat="server" ForeColor="White" Text="Label"></asp:Label>
+                </td>
+                <td class="auto-style3" style="width: 200px">
+                    <asp:Label ID="Label7" runat="server" ForeColor="White" Text="Label"></asp:Label>
+                </td>
+                <td class="auto-style3" style="width: 200px">
+                    <asp:Label ID="Label8" runat="server" ForeColor="White" Text="Label"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3" style="width: 200px">&nbsp;</td>
+                <td class="auto-style3" style="width: 200px">&nbsp;</td>
+                <td class="auto-style3" style="width: 200px">&nbsp;</td>
+                <td class="auto-style3" style="width: 200px">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style3" style="width: 200px">&nbsp;</td>
+                <td class="auto-style3" style="width: 200px">&nbsp;</td>
+                <td class="auto-style3" style="width: 200px">&nbsp;</td>
+                <td class="auto-style3" style="width: 200px">&nbsp;</td>
+            </tr>
+        </table>
+
+    </div>
 </asp:Content>
