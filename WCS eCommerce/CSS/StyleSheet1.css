@@ -1,28 +1,39 @@
 ﻿body {
     margin: 0px;
     padding: 0px;
+    background-color: #F1F1F1;
 }
 
 .container {
-    width: 100%;
-    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
 }
 
 .header {
     display: inline;
+    margin-bottom: 5px;
 }
 
 #logo {
-    width: auto;
+    width: 300px;
+    float: left;
+}
+
+.alignR {
+    text-align: right;
+    line-height: 150px;
+    font-size: large;
 }
 
 .content {
-    width: 80%;
+    clear: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    position: relative;
 }
 
-#cph2 {
-    width: 100%;
-}
 /*menu*/
 #menu a:link, a:visited {
     color: white;
@@ -34,6 +45,7 @@
 }
 
 #menu, #menu ul {
+    clear: both;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -45,20 +57,17 @@
         line-height: 2em;
         width: 6em;
         text-align: center;
-        border: 1px solid;
         margin: 1px;
     }
 
         #menu li ul {
-            position: absolute;
-            /*margin-top: -1em;*/
-            /*margin-left: .5em;*/
+            position: relative;
             display: none;
         }
 
     #menu ul li ul {
         margin-top: 6px;
-        margin-left: -12px;
+        margin-left: -11px;
     }
 
     #menu a {
@@ -67,7 +76,7 @@
     }
 
     #menu ul {
-        border-top: 1px solid #fff;
+        /*border-top: 1px solid #fff;*/
     }
 
     #menu li:hover ul, #menu li.over ul {
@@ -79,7 +88,6 @@
         }
 /*button*/
 .button {
-    border-top: 1px solid #96d1f8;
     background: #65a9d7;
     background: -webkit-gradient(linear, left top, left bottom, from(#344f91), to(#65a9d7));
     background: -webkit-linear-gradient(top, #344f91, #65a9d7);
@@ -104,8 +112,19 @@
         border-top-color: #64b1bf;
         background: #64b1bf;
     }
-
-.alignR {
-    text-align: right;
-    clear: both;
+/*sub button*/
+.subbutton {
+    padding: 5px 10px;
+    font-size: 15px;
+    font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+    text-decoration: none;
+    vertical-align: middle;
 }
+
+    .subbutton:hover {
+        background: -webkit-gradient(linear, left top, left bottom, from(#344f91), to(#65a9d7));
+        background: -webkit-linear-gradient(top, #344f91, #65a9d7);
+        background: -moz-linear-gradient(top, #344f91, #65a9d7);
+        background: -ms-linear-gradient(top, #344f91, #65a9d7);
+        background: -o-linear-gradient(top, #344f91, #65a9d7);
+    }

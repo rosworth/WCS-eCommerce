@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace WCS_eCommerce
 {
@@ -11,15 +6,16 @@ namespace WCS_eCommerce
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["loginStatus"] = false;
-            bool logged;
-            if (Session["loginStatus"] != null)
+            
+            if (IsPostBack)
             {
+                bool logged;
                 logged = Convert.ToBoolean(Session["loginStatus"]);
                 if (logged)
-                { nameHolder.Text = Session["name"].ToString(); }
+                {
+                    nameHolder.Text = Session["name"].ToString();
+                }
             }
-
         }
     }
 }

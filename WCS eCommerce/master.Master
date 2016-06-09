@@ -15,6 +15,10 @@
             <div id="logo" class="header">
                 <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/logo/logo.png" PostBackUrl="~/default.aspx" />
             </div>
+            <div class="alignR">
+                Hello,
+                    <asp:Label ID="nameHolder" runat="server" Text="Guest"></asp:Label>
+            </div>
             <div id="menu">
                 <ul>
                     <li class="button"><a href="default.aspx">Home Page</a></li>
@@ -25,22 +29,16 @@
                     <li class="button"><a href="myAccount.aspx">My Account</a></li>
                     <li class="button"><a href="#">Help &#9660;</a>
                         <ul>
-                            <li class="button"><a href="contact.aspx">Contact Us</a></li>
-                            <li class="button"><a href="faq.aspx">FAQ</a></li>
+                            <li class="subbutton"><a href="contact.aspx">Contact Us</a></li>
+                            <li class="subbutton"><a href="faq.aspx">FAQ</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
-        </div>
-        <div class="content">
-            <div class="alignR">
+            <div class="content">
                 <br />
-                <p>
-                    Hello,
-                    <asp:Label ID="nameHolder" runat="server" Text="Guest"></asp:Label>
-                </p>
+                <asp:ContentPlaceHolder ID="cph2" runat="server"></asp:ContentPlaceHolder>
             </div>
-            <asp:ContentPlaceHolder ID="cph2" runat="server"></asp:ContentPlaceHolder>
         </div>
     </form>
 </body>
