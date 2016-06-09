@@ -81,6 +81,7 @@
     <Content Include="images\cartoons\american dad.png" />
     <Content Include="images\cartoons\boondocks.png" />
     <Content Include="images\cartoons\family guy.png" />
+    <Content Include="images\cartoons\large\american dad.png" />
     <Content Include="images\cartoons\south park.png" />
     <Content Include="images\city\chicago.png" />
     <Content Include="images\city\clarge\chicago.png" />
@@ -109,7 +110,6 @@
     <Content Include="images\Classic Cars\cobra.png" />
     <Content Include="images\Classic Cars\Deuce.png" />
     <Content Include="images\Classic Cars\im not old im classic.png" />
-    <Content Include="images\cartoons\large\american dad.png" />
     <Content Include="images\cartoons\large\boondocks.png" />
     <Content Include="images\cartoons\large\family guy.png" />
     <Content Include="images\cartoons\large\south park.png" />
