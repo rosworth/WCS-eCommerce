@@ -7,11 +7,6 @@
         }
     </style>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="cph1" runat="server">
-    <p>
-        Contact Us
-    </p>
-</asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cph2" runat="server">
     <asp:Panel runat="server" DefaultButton="btnSubmit">
         <table class="auto-style1">

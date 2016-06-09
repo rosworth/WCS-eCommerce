@@ -6,52 +6,41 @@
 <head runat="server">
     <title>Wiliams Custom Specialty</title>
     <link href="CSS/StyleSheet1.css" rel="stylesheet" />
-    <style type="text/css">
-        .auto-style1 {
-            width: 100%;
-        }
-
-        .auto-style3 {
-            width: 215px;
-        }
-    </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <asp:ContentPlaceHolder ID="head" runat="server">
         </asp:ContentPlaceHolder>
         <div class="container">
-            <div class="header">
-                <div id="logo">
-                    <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/logo/logo.png" PostBackUrl="~/default.aspx" />
-                </div>
-                <div>
-                    <ul>
-                        <li><a href="default.aspx">Home Page</a></li>
-                        <li><a href="login.aspx">Login</a></li>
-                        <li><a href="register.aspx">Registration</a></li>
-                        <li><a href="catalog.aspx">Catalog</a></li>
-                        <li><a href="shirtMaker.aspx">Shirt Maker</a></li>
-                        <li><a href="checkout.aspx">Checkout</a></li>
-                        <li><a href="myAccount.aspx">My Account</a></li>
-                        <li>Help
+            <div id="logo" class="header">
+                <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/logo/logo.png" PostBackUrl="~/default.aspx" />
+            </div>
+            <div id="menu">
+                <ul>
+                    <li class="button"><a href="default.aspx">Home Page</a></li>
+                    <li class="button"><a href="login.aspx">Login</a></li>
+                    <li class="button"><a href="catalog.aspx">Catalog</a></li>
+                    <li class="button"><a href="shirtMaker.aspx">Shirt Maker</a></li>
+                    <li class="button"><a href="checkout.aspx">Checkout</a></li>
+                    <li class="button"><a href="myAccount.aspx">My Account</a></li>
+                    <li class="button"><a href="#">Help &#9660;</a>
                         <ul>
-                            <li><a href="contact.aspx">Contact Us</a></li>
-                            <li><a href="faq.aspx">FAQ</a></li>
+                            <li class="button"><a href="contact.aspx">Contact Us</a></li>
+                            <li class="button"><a href="faq.aspx">FAQ</a></li>
                         </ul>
-                        </li>
-                    </ul>
-                </div>
+                    </li>
+                </ul>
             </div>
-            <div class="content">
-                <div class="alignR">
-                    <p>
-                        Hello,
+        </div>
+        <div class="content">
+            <div class="alignR">
+                <br />
+                <p>
+                    Hello,
                     <asp:Label ID="nameHolder" runat="server" Text="Guest"></asp:Label>
-                    </p>
-                </div>
-                <asp:ContentPlaceHolder ID="cph2" runat="server"></asp:ContentPlaceHolder>
+                </p>
             </div>
+            <asp:ContentPlaceHolder ID="cph2" runat="server"></asp:ContentPlaceHolder>
         </div>
     </form>
 </body>

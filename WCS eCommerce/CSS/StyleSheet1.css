@@ -9,60 +9,103 @@
 }
 
 .header {
-    display: inline-block;
+    display: inline;
 }
 
 #logo {
-    width: 305px;
-}
-
-.nav {
-    margin: 2px;
-    border: 2px solid black;
+    width: auto;
 }
 
 .content {
-    width: 1000px;
+    width: 80%;
 }
 
 #cph2 {
-    width: 990px;
+    width: 100%;
 }
-
-a:link, a:visited {
-    color: gray;
+/*menu*/
+#menu a:link, a:visited {
+    color: white;
     text-decoration: none;
 }
 
-a:hover {
-    color: blue;
+#menu a:hover {
+    color: white;
 }
 
-ul {
+#menu, #menu ul {
     list-style: none;
-    text-align: center;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
-ul ul {
-    position: absolute;
-    display: none;
+    #menu li {
+        float: left;
+        position: relative;
+        line-height: 2em;
+        width: 6em;
+        text-align: center;
+        border: 1px solid;
+        margin: 1px;
+    }
+
+        #menu li ul {
+            position: absolute;
+            /*margin-top: -1em;*/
+            /*margin-left: .5em;*/
+            display: none;
+        }
+
+    #menu ul li ul {
+        margin-top: 6px;
+        margin-left: -12px;
+    }
+
+    #menu a {
+        display: block;
+        text-decoration: none;
+    }
+
+    #menu ul {
+        border-top: 1px solid #fff;
+    }
+
+    #menu li:hover ul, #menu li.over ul {
+        display: block;
+    }
+
+        #menu li:hover ul ul, #menu li.over ul ul {
+            display: none;
+        }
+/*button*/
+.button {
+    border-top: 1px solid #96d1f8;
+    background: #65a9d7;
+    background: -webkit-gradient(linear, left top, left bottom, from(#344f91), to(#65a9d7));
+    background: -webkit-linear-gradient(top, #344f91, #65a9d7);
+    background: -moz-linear-gradient(top, #344f91, #65a9d7);
+    background: -ms-linear-gradient(top, #344f91, #65a9d7);
+    background: -o-linear-gradient(top, #344f91, #65a9d7);
+    padding: 5px 10px;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px;
+    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    font-size: 15px;
+    font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+    text-decoration: none;
+    vertical-align: middle;
 }
 
-li:hover ul {
-    display: block;
-}
-
-li {
-    display: inline-block;
-    position: relative;
-    width: 90px;
-    height: 30px;
-    border: 2px solid black;
-    margin: 1px;
-}
+    .button:hover {
+        border-top-color: #64b1bf;
+        background: #64b1bf;
+    }
 
 .alignR {
     text-align: right;
+    clear: both;
 }
