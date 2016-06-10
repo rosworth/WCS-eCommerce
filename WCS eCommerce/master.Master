@@ -12,6 +12,8 @@
     <link href="CSS/jquery.fancybox.css" rel="stylesheet" />
     <link href="CSS/prism.css" rel="stylesheet" />
     <link href="CSS/sharebar.css" rel="stylesheet" />
+    <style type="text/css">
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -23,6 +25,7 @@
                     <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/logo/logo.png" PostBackUrl="~/default.aspx" />
                 </div>
                 <div id="alignR">
+                    <p></p>
                     Hello,
                     <asp:Label ID="nameHolder" runat="server" Text="Guest"></asp:Label>
                 </div>

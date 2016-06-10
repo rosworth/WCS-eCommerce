@@ -5,10 +5,14 @@
 <asp:Content ContentPlaceHolderID="cph2" runat="server">
     Account Info
     <br />
-    <asp:GridView ID="accountGrid" runat="server" AutoGenerateColumns="False" DataSourceID="accountInfo" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
+    <asp:GridView ID="accountGrid" runat="server" AutoGenerateColumns="False" DataSourceID="accountInfo" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" Width="550px">
         <Columns>
-            <asp:BoundField DataField="firstName" HeaderText="First Name" SortExpression="firstName" />
-            <asp:BoundField DataField="lastName" HeaderText="Last Name" SortExpression="lastName" />
+            <asp:BoundField DataField="firstName" HeaderText="First Name" SortExpression="firstName" >
+            <ControlStyle Width="75px" />
+            </asp:BoundField>
+            <asp:BoundField DataField="lastName" HeaderText="Last Name" SortExpression="lastName" >
+            <ControlStyle Width="75px" />
+            </asp:BoundField>
             <asp:BoundField DataField="address1" HeaderText="Address 1" SortExpression="address1" />
             <asp:BoundField DataField="address2" HeaderText="Address 2" SortExpression="address2" />
             <asp:BoundField DataField="city" HeaderText="City" SortExpression="city" />
@@ -26,7 +30,7 @@
     </asp:GridView>
     <br />
     Order History<br />
-    <asp:GridView ID="ordersGrid" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="orders" GridLines="Horizontal" ForeColor="Black">
+    <asp:GridView ID="ordersGrid" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="orders" GridLines="Horizontal" ForeColor="Black" Width="550px">
         <Columns>
             <asp:BoundField DataField="dateTime" HeaderText="Date" SortExpression="dateTime" />
             <asp:BoundField DataField="deposit" HeaderText="Deposit" SortExpression="deposit" DataFormatString="{0:c}" />

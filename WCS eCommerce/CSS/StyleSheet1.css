@@ -8,39 +8,40 @@
     margin-left: auto;
     margin-right: auto;
     width: 785px;
-    height: 100%;
+    height: auto;
 }
 
 .header {
     display: inline;
-    margin-bottom: 15px;
 }
 
 #logo {
     width: 300px;
+    height: 160px;
     float: left;
 }
 
 #alignR {
     text-align: right;
-    line-height: 150px;
+    vertical-align: bottom;
+    line-height: 60px;
     font-size: large;
 }
 
 .content {
     clear: both;
-    top: 200px;
+    top: 250px;
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
     position: absolute;
     width: 36em;
-    z-index: -1;
 }
 
 /*menu*/
 #menu {
-    height: auto;
+    /*height: auto;*/
+    position: relative;
 }
 #menu a:link, a:visited {
     color: white;
