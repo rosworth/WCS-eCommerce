@@ -1,15 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master.Master" AutoEventWireup="true" CodeBehind="contact.aspx.cs" Inherits="WCS_eCommerce.contact" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style type="text/css">
-        .auto-style1 {
-            width: 800px;
-        }
-    </style>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cph2" runat="server">
-    <asp:Panel runat="server" DefaultButton="btnSubmit">
-        <table class="auto-style1">
+    <asp:Panel runat="server">
+        <table>
             <tr>
                 <td>First Name</td>
                 <td>

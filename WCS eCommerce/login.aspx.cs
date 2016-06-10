@@ -6,7 +6,6 @@ namespace WCS_eCommerce
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["loginStatus"] = false;
             lblError.Visible = false;
         }
 

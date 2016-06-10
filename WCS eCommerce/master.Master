@@ -6,27 +6,43 @@
 <head runat="server">
     <title>Wiliams Custom Specialty</title>
     <link href="CSS/StyleSheet1.css" rel="stylesheet" />
+    <link href="CSS/style.css" rel="stylesheet" />
+    <link href="CSS/default.css" rel="stylesheet" />
+    <link href="CSS/jquery-ui.css" rel="stylesheet" />
+    <link href="CSS/jquery.fancybox.css" rel="stylesheet" />
+    <link href="CSS/prism.css" rel="stylesheet" />
+    <link href="CSS/sharebar.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
         <asp:ContentPlaceHolder ID="head" runat="server">
         </asp:ContentPlaceHolder>
         <div class="container">
-            <div id="logo" class="header">
-                <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/logo/logo.png" PostBackUrl="~/default.aspx" />
-            </div>
-            <div class="alignR">
-                Hello,
+            <div class="header">
+                <div id="logo">
+                    <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/logo/logo.png" PostBackUrl="~/default.aspx" />
+                </div>
+                <div id="alignR">
+                    Hello,
                     <asp:Label ID="nameHolder" runat="server" Text="Guest"></asp:Label>
+                </div>
             </div>
             <div id="menu">
                 <ul>
-                    <li class="button"><a href="default.aspx">Home Page</a></li>
+                    <li class="button"><a href="default.aspx">Home</a></li>
                     <li class="button"><a href="login.aspx">Login</a></li>
-                    <li class="button"><a href="catalog.aspx">Catalog</a></li>
                     <li class="button"><a href="shirtMaker.aspx">Shirt Maker</a></li>
                     <li class="button"><a href="checkout.aspx">Checkout</a></li>
                     <li class="button"><a href="myAccount.aspx">My Account</a></li>
+                    <li class="button"><a href="catalog.aspx">Catalog &#9660;</a>
+                        <ul>
+                            <li class="subbutton"><a href="CartoonsPage.aspx">Cartoons</a></li>
+                            <li class="subbutton"><a href="citypage.aspx">Cities</a></li>
+                            <li class="subbutton"><a href="ClassicCars.aspx">Classic Cars</a></li>
+                            <li class="subbutton"><a href="MemesPage.aspx">Memes</a></li>
+                            <li class="subbutton"><a href="VideoGamesPage.aspx">Video Games</a></li>
+                        </ul>
+                    </li>
                     <li class="button"><a href="#">Help &#9660;</a>
                         <ul>
                             <li class="subbutton"><a href="contact.aspx">Contact Us</a></li>

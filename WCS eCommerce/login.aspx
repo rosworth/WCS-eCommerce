@@ -13,7 +13,6 @@
             <tr>
                 <td colspan="2">
                     <asp:Label ID="lblLoginError" runat="server" Visible="False"></asp:Label></td>
-
             </tr>
             <tr>
                 <td class="table-300px">Username</td>
@@ -34,9 +33,7 @@
             </tr>
         </table>
     </asp:Panel>
-    <br />
     <hr />
-    <br />
     <asp:Panel runat="server" DefaultButton="btnRegister">
         <table class="auto-style1">
             <tr>
@@ -47,49 +44,49 @@
             <tr>
                 <td class="table-300px">Username</td>
                 <td>
-                    <asp:TextBox ID="txtRegisterUsername" runat="server" Width="128px"></asp:TextBox>
+                    <asp:TextBox ID="txtRegisterUsername" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="table-300px">Password</td>
                 <td>
-                    <asp:TextBox ID="txtRegisterPassword" runat="server" TextMode="Password" Width="128px"></asp:TextBox>
+                    <asp:TextBox ID="txtRegisterPassword" runat="server" TextMode="Password"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="table-300px">First Name</td>
                 <td>
-                    <asp:TextBox ID="txtFirst" runat="server" Width="128px"></asp:TextBox>
+                    <asp:TextBox ID="txtFirst" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="table-300px">Last Name</td>
                 <td>
-                    <asp:TextBox ID="txtLast" runat="server" Width="128px"></asp:TextBox>
+                    <asp:TextBox ID="txtLast" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="table-300px">Address 1</td>
                 <td>
-                    <asp:TextBox ID="txtAdd1" runat="server" Width="128px"></asp:TextBox>
+                    <asp:TextBox ID="txtAdd1" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="table-300px">Address 2</td>
                 <td>
-                    <asp:TextBox ID="txtAdd2" runat="server" Width="128px"></asp:TextBox>
+                    <asp:TextBox ID="txtAdd2" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="table-300px">City</td>
                 <td>
-                    <asp:TextBox ID="txtCity" runat="server" Width="128px"></asp:TextBox>
+                    <asp:TextBox ID="txtCity" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="table-300px">State</td>
                 <td>
-                    <asp:DropDownList ID="ddlState" runat="server" Width="128px">
+                    <asp:DropDownList ID="ddlState" runat="server">
                         <asp:ListItem Value="AL">Alabama</asp:ListItem>
                         <asp:ListItem Value="AK">Alaska</asp:ListItem>
                         <asp:ListItem Value="AZ">Arizona</asp:ListItem>
@@ -146,7 +143,7 @@
             <tr>
                 <td class="table-300px">Zip</td>
                 <td>
-                    <asp:TextBox ID="txtZip" runat="server" Width="128px"></asp:TextBox>
+                    <asp:TextBox ID="txtZip" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>

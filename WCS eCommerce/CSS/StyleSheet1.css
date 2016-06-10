@@ -7,12 +7,13 @@
 .container {
     margin-left: auto;
     margin-right: auto;
-    width: 800px;
+    width: 785px;
+    height: 100%;
 }
 
 .header {
     display: inline;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 #logo {
@@ -20,21 +21,27 @@
     float: left;
 }
 
-.alignR {
+#alignR {
     text-align: right;
     line-height: 150px;
     font-size: large;
 }
 
 .content {
-    clear: left;
+    clear: both;
+    top: 200px;
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
-    position: relative;
+    position: absolute;
+    width: 36em;
+    z-index: -1;
 }
 
 /*menu*/
+#menu {
+    height: auto;
+}
 #menu a:link, a:visited {
     color: white;
     text-decoration: none;
@@ -73,10 +80,6 @@
     #menu a {
         display: block;
         text-decoration: none;
-    }
-
-    #menu ul {
-        /*border-top: 1px solid #fff;*/
     }
 
     #menu li:hover ul, #menu li.over ul {
