@@ -39,17 +39,26 @@ namespace WCS_eCommerce
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-            //if ()
-            //{
-            if (clsDataLayer.RegisterUser(Server.MapPath(@"App_Data\WCS.accdb"), txtLoginUsername.Text, txtLoginPassword.Text, txtFirst.Text, txtLast.Text, txtAdd1.Text, txtAdd2.Text, txtCity.Text, ddlState.SelectedValue, txtZip.Text))
+            if (!String.IsNullOrEmpty(txtRegisterUsername.Text.Trim()) && !String.IsNullOrEmpty(txtRegisterPassword.Text.Trim()))
             {
-                Response.Redirect("myAccount.aspx");
+                if (clsDataLayer.RegisterUser(Server.MapPath(@"App_Data\WCS.accdb"), txtRegisterUsername.Text, txtRegisterPassword.Text, txtFirst.Text, txtLast.Text, txtAdd1.Text, txtAdd2.Text, txtCity.Text, ddlState.SelectedValue, txtZip.Text))
+                {
+                    Session["loginStatus"] = true;
+                    Session["customerID"] = clsDataLayer.GetCustomerID(Server.MapPath(@"App_Data\WCS.accdb"), txtLoginUsername.Text, txtLoginPassword.Text);
+                    Session["name"] = clsDataLayer.GetFirstName(Server.MapPath(@"App_Data\WCS.accdb"), Session["customerID"].ToString());
+                    Response.Redirect("myAccount.aspx");
+                }
+                else
+                {
+                    lblError.Text = "Unknown error has occured";
+                    lblError.Visible = true;
+                }
             }
             else
             {
+                lblError.Text = "Username or password cannot be empty";
                 lblError.Visible = true;
             }
-            //}
         }
     }
 }
