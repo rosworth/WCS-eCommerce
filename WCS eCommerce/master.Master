@@ -6,14 +6,13 @@
 <head runat="server">
     <title>Wiliams Custom Specialty</title>
     <link href="CSS/StyleSheet1.css" rel="stylesheet" />
+    <link href="CSS/style.css" rel="stylesheet" />
+    <link href="CSS/default.css" rel="stylesheet" />
+    <link href="CSS/jquery-ui.css" rel="stylesheet" />
+    <link href="CSS/jquery.fancybox.css" rel="stylesheet" />
+    <link href="CSS/prism.css" rel="stylesheet" />
+    <link href="CSS/sharebar.css" rel="stylesheet" />
     <style type="text/css">
-        .auto-style1 {
-            width: 100%;
-        }
-
-        .auto-style3 {
-            width: 215px;
-        }
     </style>
 </head>
 <body>
@@ -25,31 +24,38 @@
                 <div id="logo">
                     <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/logo/logo.png" PostBackUrl="~/default.aspx" />
                 </div>
-                <div>
-                    <ul>
-                        <li><a href="default.aspx">Home Page</a></li>
-                        <li><a href="login.aspx">Login</a></li>
-                        <li><a href="register.aspx">Registration</a></li>
-                        <li><a href="catalog.aspx">Catalog</a></li>
-                        <li><a href="shirtMaker.aspx">Shirt Maker</a></li>
-                        <li><a href="checkout.aspx">Checkout</a></li>
-                        <li><a href="myAccount.aspx">My Account</a></li>
-                        <li>Help
-                        <ul>
-                            <li><a href="contact.aspx">Contact Us</a></li>
-                            <li><a href="faq.aspx">FAQ</a></li>
-                        </ul>
-                        </li>
-                    </ul>
+                <div id="alignR">
+                    <p></p>
+                    Hello,
+                    <asp:Label ID="nameHolder" runat="server" Text="Guest"></asp:Label>
                 </div>
             </div>
+            <div id="menu">
+                <ul>
+                    <li class="button"><a href="default.aspx">Home</a></li>
+                    <li class="button"><a href="login.aspx">Login</a></li>
+                    <li class="button"><a href="shirtMaker.aspx">Shirt Maker</a></li>
+                    <li class="button"><a href="checkout.aspx">Checkout</a></li>
+                    <li class="button"><a href="myAccount.aspx">My Account</a></li>
+                    <li class="button"><a href="catalog.aspx">Catalog &#9660;</a>
+                        <ul>
+                            <li class="subbutton"><a href="CartoonsPage.aspx">Cartoons</a></li>
+                            <li class="subbutton"><a href="citypage.aspx">Cities</a></li>
+                            <li class="subbutton"><a href="ClassicCars.aspx">Classic Cars</a></li>
+                            <li class="subbutton"><a href="MemesPage.aspx">Memes</a></li>
+                            <li class="subbutton"><a href="VideoGamesPage.aspx">Video Games</a></li>
+                        </ul>
+                    </li>
+                    <li class="button"><a href="#">Help &#9660;</a>
+                        <ul>
+                            <li class="subbutton"><a href="contact.aspx">Contact Us</a></li>
+                            <li class="subbutton"><a href="faq.aspx">FAQ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
             <div class="content">
-                <div class="alignR">
-                    <p>
-                        Hello,
-                    <asp:Label ID="nameHolder" runat="server" Text="Guest"></asp:Label>
-                    </p>
-                </div>
+                <br />
                 <asp:ContentPlaceHolder ID="cph2" runat="server"></asp:ContentPlaceHolder>
             </div>
         </div>

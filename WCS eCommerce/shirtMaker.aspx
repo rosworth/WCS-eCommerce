@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master.Master" AutoEventWireup="true" CodeBehind="shirtMaker.aspx.cs" Inherits="WCS_eCommerce.shirtMaker" %>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="cph1" runat="server">
-    <p>
-        Shirt Maker
-    </p>
+<asp:Content runat="server" ContentPlaceHolderID="head">
+</asp:Content>
+<asp:Content runat="server" ContentPlaceHolderID="cph2">
 </asp:Content>

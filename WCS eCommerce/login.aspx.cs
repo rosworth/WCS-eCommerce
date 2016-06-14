@@ -13,7 +13,7 @@ namespace WCS_eCommerce
         {
             lblLoginError.Visible = false;
             dsInfo dsUserLogin;
-            if (!String.IsNullOrEmpty(txtLoginUsername.Text) && !String.IsNullOrEmpty(txtLoginPassword.Text))
+            if (String.IsNullOrEmpty(txtLoginUsername.Text) && String.IsNullOrEmpty(txtLoginPassword.Text))
             {
                 lblLoginError.Text = "Username/Password is empty";
                 lblLoginError.Visible = true;

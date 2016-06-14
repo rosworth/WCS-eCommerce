@@ -2,25 +2,8 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-        .auto-style2 {
-            width: 90px;
-        }
-
-        #username {
-            width: 150px;
-        }
-
-        #password {
-            width: 150px;
-        }
-
-        .auto-style3 {
-            width: 90px;
-            height: 26px;
-        }
-
-        .auto-style4 {
-            height: 26px;
+        .table-300px {
+            width: 300px;
         }
     </style>
 </asp:Content>
@@ -28,115 +11,80 @@
     <asp:Panel runat="server" DefaultButton="btnLogin">
         <table>
             <tr>
-                <td colspan="3">
+                <td colspan="2">
                     <asp:Label ID="lblLoginError" runat="server" Visible="False"></asp:Label></td>
-
             </tr>
             <tr>
-                <td class="auto-style2">Username</td>
+                <td class="table-300px">Username</td>
                 <td>
                     <asp:TextBox ID="txtLoginUsername" runat="server"></asp:TextBox>
                 </td>
-                <td>
-                    &nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style3">Password</td>
-                <td class="auto-style4">
+                <td class="table-300px">Password</td>
+                <td>
                     <asp:TextBox ID="txtLoginPassword" runat="server" TextMode="Password"></asp:TextBox>
                 </td>
-                <td class="auto-style4">
-                    &nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">&nbsp;</td>
-                <td>
-                    <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="Button1_Click" />
-                </td>
                 <td>&nbsp;</td>
+                <td>
+                    <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="Button1_Click" Width="70px" />
             </tr>
         </table>
     </asp:Panel>
-    <br />
     <hr />
-    <br />
     <asp:Panel runat="server" DefaultButton="btnRegister">
         <table class="auto-style1">
             <tr>
-                <td>
-                    <asp:Label ID="Label1" runat="server" Text="Username"></asp:Label>
+                <td colspan="2">
+                    <asp:Label ID="lblError" runat="server" Visible="False"></asp:Label>
                 </td>
+            </tr>
+            <tr>
+                <td class="table-300px">Username</td>
                 <td>
                     <asp:TextBox ID="txtRegisterUsername" runat="server"></asp:TextBox>
                 </td>
-                <td>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtRegisterUsername" ErrorMessage="Username is required"></asp:RequiredFieldValidator>
-                </td>
             </tr>
             <tr>
-                <td>
-                    <asp:Label ID="Label2" runat="server" Text="Password"></asp:Label>
-                </td>
+                <td class="table-300px">Password</td>
                 <td>
                     <asp:TextBox ID="txtRegisterPassword" runat="server" TextMode="Password"></asp:TextBox>
                 </td>
-                <td>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtRegisterPassword" ErrorMessage="Password is required"></asp:RequiredFieldValidator>
-                </td>
             </tr>
             <tr>
-                <td>
-                    <asp:Label ID="Label3" runat="server" Text="First Name"></asp:Label>
-                </td>
+                <td class="table-300px">First Name</td>
                 <td>
                     <asp:TextBox ID="txtFirst" runat="server"></asp:TextBox>
                 </td>
-                <td>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtFirst" ErrorMessage="First name is required"></asp:RequiredFieldValidator>
-                </td>
             </tr>
             <tr>
-                <td>
-                    <asp:Label ID="Label4" runat="server" Text="Last Name"></asp:Label>
-                </td>
+                <td class="table-300px">Last Name</td>
                 <td>
                     <asp:TextBox ID="txtLast" runat="server"></asp:TextBox>
                 </td>
-                <td>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtLast" ErrorMessage="Last name is required"></asp:RequiredFieldValidator>
-                </td>
             </tr>
             <tr>
-                <td>
-                    <asp:Label ID="Label5" runat="server" Text="Address 1"></asp:Label>
-                </td>
+                <td class="table-300px">Address 1</td>
                 <td>
                     <asp:TextBox ID="txtAdd1" runat="server"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
             </tr>
             <tr>
-                <td>
-                    <asp:Label ID="Label6" runat="server" Text="Address 2"></asp:Label>
-                </td>
+                <td class="table-300px">Address 2</td>
                 <td>
                     <asp:TextBox ID="txtAdd2" runat="server"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
             </tr>
             <tr>
-                <td style="height: 23px">
-                    <asp:Label ID="Label7" runat="server" Text="City"></asp:Label>
-                </td>
-                <td style="height: 23px">
+                <td class="table-300px">City</td>
+                <td>
                     <asp:TextBox ID="txtCity" runat="server"></asp:TextBox>
                 </td>
-                <td style="height: 23px">&nbsp;</td>
             </tr>
             <tr>
-                <td>
-                    <asp:Label ID="Label8" runat="server" Text="State"></asp:Label>
-                </td>
+                <td class="table-300px">State</td>
                 <td>
                     <asp:DropDownList ID="ddlState" runat="server">
                         <asp:ListItem Value="AL">Alabama</asp:ListItem>
@@ -191,26 +139,17 @@
                         <asp:ListItem Value="WI">Wisconsin</asp:ListItem>
                         <asp:ListItem Value="WY">Wyoming</asp:ListItem>
                     </asp:DropDownList></td>
-                <td>&nbsp;</td>
             </tr>
             <tr>
-                <td>
-                    <asp:Label ID="Label9" runat="server" Text="Zip"></asp:Label>
-                </td>
+                <td class="table-300px">Zip</td>
                 <td>
                     <asp:TextBox ID="txtZip" runat="server"></asp:TextBox>
                 </td>
-                <td>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtZip" ErrorMessage="Invalid US zip code" ValidationExpression="\d{5}(-\d{4})?"></asp:RegularExpressionValidator>
-                </td>
             </tr>
             <tr>
                 <td>&nbsp;</td>
                 <td>
-                    <asp:Label ID="lblError" runat="server" Text="Error has occured."></asp:Label>
-                </td>
-                <td>
-                    <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" />
+                    <asp:Button ID="btnRegister" runat="server" OnClick="btnRegister_Click" Text="Register" />
                 </td>
             </tr>
         </table>
