@@ -6,12 +6,12 @@ namespace WCS_eCommerce
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (!IsPostBack && Session["loginStatus"] != null)
             {
-                Session["loginStatus"] = false;
-            }
-            else
-            {
+            //    Session["loginStatus"] = false;
+            //}
+            //else
+            //{
                 bool logged;
                 logged = Convert.ToBoolean(Session["loginStatus"]);
                 if (logged)

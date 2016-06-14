@@ -6,7 +6,7 @@ namespace WCS_eCommerce
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (Session["loginStatus"] != null)
             {
                 bool logged;
                 logged = bool.Parse(Session["loginStatus"].ToString());
@@ -14,6 +14,10 @@ namespace WCS_eCommerce
                 {
                     Response.Redirect("login.aspx");
                 }
+            }
+            else
+            {
+                Response.Redirect("login.aspx");
             }
         }
     }
