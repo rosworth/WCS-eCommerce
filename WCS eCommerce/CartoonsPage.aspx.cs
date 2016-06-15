@@ -29,6 +29,11 @@ namespace WCS_eCommerce.Catalog_pages
             //}
         }
 
-       
+        protected void DropDownList5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            DropDownList5.Items[1].Attributes.Add("style", "color:Blue");
+            DropDownList5.Items[2].Attributes.Add("style", "color:Black");
+        }
     }
 }
