@@ -25,7 +25,10 @@
                     <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/logo/logo.png" PostBackUrl="~/default.aspx" />
                 </div>
                 <div id="alignR">
-                    <p></p>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                     Hello,
                     <asp:Label ID="nameHolder" runat="server" Text="Guest"></asp:Label>
                 </div>

@@ -13,31 +13,22 @@ namespace WCS_eCommerce
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!this.IsPostBack)
-            {
-                DataTable dt = new DataTable();
-                dt.Columns.AddRange(new DataColumn[3] { new DataColumn("ImageName"),
-                new DataColumn("ImageUrl"),
-                new DataColumn("ZoomImageUrl")
-        });
-                string[] filePaths = Directory.GetFiles(Server.MapPath("~/images/video games/"));
-                foreach (string filePath in filePaths)
-                {
-                    string fileName = Path.GetFileName(filePath);
-                    dt.Rows.Add(fileName, "~/images/video games/vgsmall/" + fileName, "~/images/video games/vglarge/" + fileName);
-                }
-                DataList1.DataSource = dt;
-                DataList1.DataBind();
-            }
-
-
-            {
-
-
-
-
-            }
-
+            //    if (!this.IsPostBack)
+            //    {
+            //        DataTable dt = new DataTable();
+            //        dt.Columns.AddRange(new DataColumn[3] { new DataColumn("ImageName"),
+            //        new DataColumn("ImageUrl"),
+            //        new DataColumn("ZoomImageUrl")
+            //});
+            //        string[] filePaths = Directory.GetFiles(Server.MapPath("~/images/video games/"));
+            //        foreach (string filePath in filePaths)
+            //        {
+            //            string fileName = Path.GetFileName(filePath);
+            //            dt.Rows.Add(fileName, "~/images/video games/vgsmall/" + fileName, "~/images/video games/vglarge/" + fileName);
+            //        }
+            //        DataList1.DataSource = dt;
+            //        DataList1.DataBind();
+            //    }
         }
     }
 }

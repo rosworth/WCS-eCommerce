@@ -13,8 +13,8 @@ namespace WCS_eCommerce
             OleDbDataAdapter sqlDA;
             OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + database);
             sqlDA = new OleDbDataAdapter("SELECT * FROM loginInfo " +
-            "WHERE username LIKE '" + UserName + "' " +
-            "AND password LIKE '" + UserPassword + "'", conn);
+            "WHERE username= '" + UserName + "' " +
+            "AND password= '" + UserPassword + "'", conn);
             DS = new dsInfo();
             sqlDA.Fill(DS.loginInfo);
             return DS;
