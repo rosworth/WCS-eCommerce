@@ -14,6 +14,18 @@
         .active img {
             border: 2px solid #333 !important;
         }
+        .auto-style1 {
+            width: 104px;
+        }
+        .auto-style2 {
+            width: 51px;
+        }
+        .auto-style3 {
+            width: 73px;
+        }
+        .auto-style4 {
+            width: 81px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cph2" runat="server">
@@ -22,7 +34,7 @@
             <a href="#" data-image="images/cartoons/small/american%20dad.png" data-zoom-image="images/cartoons/large/american%20dad.png">
                 <img id="img_01" src="images/cartoons/small/american%20dad.png" style="height: 75px; width: 75px;" />
             </a>
-        </div>
+       </div>
         <div>
             <a href="#" data-image="images/cartoons/small/boondocks.png" data-zoom-image="images/cartoons/large/boondocks.png">
                 <img id="img_02" src="images/cartoons/small/boondocks.png" style="height: 75px; width: 75px;" />
@@ -39,9 +51,125 @@
             </a>
         </div>
     </div>
-    <img id="zoom_03" src="images/cartoons/small/american%20dad.png" data-zoom-image="images/cartoons/large/american%20dad.png" />
+            <a href="#" data-image="images/cartoons/small/american%20dad.png" data-zoom-image="images/cartoons/large/american%20dad.png">
+                <img id="zoom_03" src="images/cartoons/small/american%20dad.png" data-zoom-image="images/cartoons/large/american%20dad.png" /></a><div>
 
-    <script type="text/javascript">
+        <table class="ui-accordion">
+            <tr>
+                <td class="auto-style1">
+                    <asp:Label ID="Label1" runat="server" Font-Bold="True" Text="American Dad"></asp:Label>
+                </td>
+                <td class="auto-style2">
+                    <asp:Label ID="Label2" runat="server" Text="Boondocks"></asp:Label>
+                </td>
+                <td class="auto-style3">
+                    <asp:Label ID="Label3" runat="server" Text="Family Guy"></asp:Label>
+                </td>
+                <td class="auto-style4">
+                    <asp:Label ID="Label4" runat="server" Text="South Park"></asp:Label>
+                </td>
+                <td>
+                    <asp:Label ID="Label5" runat="server" BorderStyle="Double" Font-Bold="True" Font-Italic="True" ForeColor="Red" Text="XS,S,M,L,XL: $10"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style1">
+                    <asp:Label ID="Label6" runat="server" Text="Color"></asp:Label>
+                </td>
+                <td class="auto-style2">
+                    <asp:Label ID="Label7" runat="server" Text="Color"></asp:Label>
+                </td>
+                <td class="auto-style3">
+                    <asp:Label ID="Label8" runat="server" Text="Color"></asp:Label>
+                </td>
+                <td class="auto-style4">
+                    <asp:Label ID="Label9" runat="server" Text="Color"></asp:Label>
+                </td>
+                <td>
+                    <asp:Label ID="Label10" runat="server" BorderStyle="Double" Font-Bold="True" Font-Italic="True" ForeColor="Red" Text="2XL: $12" Width="121px"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style1">
+                    <asp:DropDownList ID="DropDownList1" runat="server">
+                    </asp:DropDownList>
+                </td>
+                <td class="auto-style2">
+                    <asp:DropDownList ID="DropDownList2" runat="server">
+                    </asp:DropDownList>
+                </td>
+                <td class="auto-style3">
+                    <asp:DropDownList ID="DropDownList3" runat="server">
+                    </asp:DropDownList>
+                </td>
+                <td class="auto-style4">
+                    <asp:DropDownList ID="DropDownList4" runat="server">
+                    </asp:DropDownList>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style1">
+                    <asp:Label ID="Label11" runat="server" Text="Qty:"></asp:Label>
+                </td>
+                <td class="auto-style2">
+                    <asp:Label ID="Label12" runat="server" Text="Qty:"></asp:Label>
+                </td>
+                <td class="auto-style3">
+                    <asp:Label ID="Label13" runat="server" Text="Qty:"></asp:Label>
+                </td>
+                <td class="auto-style4">
+                    <asp:Label ID="Label14" runat="server" Text="Qty:"></asp:Label>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style1">
+                    <asp:DropDownList ID="DropDownList5" runat="server">
+                    </asp:DropDownList>
+                </td>
+                <td class="auto-style2">
+                    <asp:DropDownList ID="DropDownList6" runat="server">
+                    </asp:DropDownList>
+                </td>
+                <td class="auto-style3">
+                    <asp:DropDownList ID="DropDownList7" runat="server">
+                    </asp:DropDownList>
+                </td>
+                <td class="auto-style4">
+                    <asp:DropDownList ID="DropDownList8" runat="server">
+                    </asp:DropDownList>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style1">&nbsp;</td>
+                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style3">&nbsp;</td>
+                <td class="auto-style4">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style1">
+                    <asp:Button ID="Button5" runat="server" Text="Button" />
+                </td>
+                <td class="auto-style2">
+                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+                </td>
+                <td class="auto-style3">
+                    <asp:Button ID="Button2" runat="server" Text="Button" />
+                </td>
+                <td class="auto-style4">
+                    <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Button" />
+                </td>
+                <td>
+                    <asp:Button ID="Button4" runat="server" Text="Button" />
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    &nbsp;<script type="text/javascript">
         //initiate the plugin and pass the id of the div containing gallery images
         $("#zoom_03").elevateZoom({
             gallery: 'gallery_01', cursor: 'crosshair', galleryActiveClass: 'active', imageCrossfade: true, loadingIcon: 'http://www.elevateweb.co.uk/spinner.gif', zoomWindowPosition: 3, zoomWindowOffetx: 20, zoomWindowOffety: 225
@@ -53,5 +181,6 @@
             $.fancybox(ez.getGalleryList());
             return false;
         });
-    </script>
+    </script>&nbsp;
+    
 </asp:Content>

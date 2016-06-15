@@ -28,5 +28,7 @@ namespace WCS_eCommerce.Catalog_pages
             //    DataList1.DataBind();
             //}
         }
+
+       
     }
 }
