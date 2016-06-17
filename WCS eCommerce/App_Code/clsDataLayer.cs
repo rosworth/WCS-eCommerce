@@ -12,9 +12,18 @@ namespace WCS_eCommerce
             dsInfo DS;
             OleDbDataAdapter sqlDA;
             OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + database);
-            sqlDA = new OleDbDataAdapter("SELECT * FROM loginInfo " +
-            "WHERE username= '" + UserName + "' " +
-            "AND password= '" + UserPassword + "'", conn);
+            sqlDA = new OleDbDataAdapter("SELECT * FROM loginInfo " + "WHERE username= '" + UserName + "' " + "AND password= '" + UserPassword + "'", conn);
+            DS = new dsInfo();
+            sqlDA.Fill(DS.loginInfo);
+            return DS;
+        }
+
+        public static dsInfo CheckUsername(string database, string UserName)
+        {
+            dsInfo DS;
+            OleDbDataAdapter sqlDA;
+            OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + database);
+            sqlDA = new OleDbDataAdapter("SELECT * FROM loginInfo " + "WHERE username= '" + UserName + "'", conn);
             DS = new dsInfo();
             sqlDA.Fill(DS.loginInfo);
             return DS;
@@ -42,7 +51,7 @@ namespace WCS_eCommerce
             OleDbCommand comm = new OleDbCommand();
             OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + database);
             comm.Connection = conn;
-            comm.CommandText = "SELECT * FROM loginInfo " + "WHERE username LIKE '" + UserName + "' " + "AND password LIKE '" + UserPassword + "'";
+            comm.CommandText = "SELECT * FROM loginInfo " + "WHERE username = '" + UserName + "' " + "AND password = '" + UserPassword + "'";
             comm.Connection.Open();
             OleDbDataReader read = comm.ExecuteReader();
             while (read.Read())

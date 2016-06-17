@@ -5,6 +5,13 @@
         .table-300px {
             width: 300px;
         }
+        .auto-style1 {
+            width: 300px;
+            height: 27px;
+        }
+        .auto-style2 {
+            height: 27px;
+        }
     </style>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="cph2" runat="server">
@@ -12,7 +19,7 @@
         <table>
             <tr>
                 <td colspan="2">
-                    <asp:Label ID="lblLoginError" runat="server" Visible="False"></asp:Label></td>
+                    <asp:Label ID="lblLoginError" runat="server" Visible="False" Font-Bold="True" Font-Italic="False" ForeColor="#FF3300"></asp:Label></td>
             </tr>
             <tr>
                 <td class="table-300px">Username</td>
@@ -21,8 +28,8 @@
                 </td>
             </tr>
             <tr>
-                <td class="table-300px">Password</td>
-                <td>
+                <td class="auto-style1">Password</td>
+                <td class="auto-style2">
                     <asp:TextBox ID="txtLoginPassword" runat="server" TextMode="Password"></asp:TextBox>
                 </td>
             </tr>
@@ -38,7 +45,7 @@
         <table class="auto-style1">
             <tr>
                 <td colspan="2">
-                    <asp:Label ID="lblError" runat="server" Visible="False"></asp:Label>
+                    <asp:Label ID="lblError" runat="server" Visible="False" Font-Bold="True" Font-Italic="False" ForeColor="Red"></asp:Label>
                 </td>
             </tr>
             <tr>

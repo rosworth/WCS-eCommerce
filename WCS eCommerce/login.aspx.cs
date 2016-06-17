@@ -39,18 +39,28 @@ namespace WCS_eCommerce
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
+            dsInfo dsUserCheck;
             if (!String.IsNullOrEmpty(txtRegisterUsername.Text.Trim()) && !String.IsNullOrEmpty(txtRegisterPassword.Text.Trim()))
             {
-                if (clsDataLayer.RegisterUser(Server.MapPath(@"App_Data\WCS.accdb"), txtRegisterUsername.Text, txtRegisterPassword.Text, txtFirst.Text, txtLast.Text, txtAdd1.Text, txtAdd2.Text, txtCity.Text, ddlState.SelectedValue, txtZip.Text))
+                dsUserCheck = clsDataLayer.CheckUsername(Server.MapPath(@"App_Data\WCS.accdb"), txtRegisterUsername.Text);
+                if (dsUserCheck.loginInfo.Count < 1)
                 {
-                    Session["loginStatus"] = true;
-                    Session["customerID"] = clsDataLayer.GetCustomerID(Server.MapPath(@"App_Data\WCS.accdb"), txtLoginUsername.Text, txtLoginPassword.Text);
-                    Session["name"] = clsDataLayer.GetFirstName(Server.MapPath(@"App_Data\WCS.accdb"), Session["customerID"].ToString());
-                    Response.Redirect("myAccount.aspx");
+                    if (clsDataLayer.RegisterUser(Server.MapPath(@"App_Data\WCS.accdb"), txtRegisterUsername.Text, txtRegisterPassword.Text, txtFirst.Text, txtLast.Text, txtAdd1.Text, txtAdd2.Text, txtCity.Text, ddlState.SelectedValue, txtZip.Text))
+                    {
+                        Session["loginStatus"] = true;
+                        Session["customerID"] = clsDataLayer.GetCustomerID(Server.MapPath(@"App_Data\WCS.accdb"), txtLoginUsername.Text, txtLoginPassword.Text);
+                        Session["name"] = clsDataLayer.GetFirstName(Server.MapPath(@"App_Data\WCS.accdb"), Session["customerID"].ToString());
+                        Response.Redirect("myAccount.aspx");
+                    }
+                    else
+                    {
+                        lblError.Text = "Unknown error has occured";
+                        lblError.Visible = true;
+                    }
                 }
                 else
                 {
-                    lblError.Text = "Unknown error has occured";
+                    lblError.Text = "Username is already taken";
                     lblError.Visible = true;
                 }
             }
