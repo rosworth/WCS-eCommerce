@@ -8,7 +8,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 785px;
-    height: auto;
+    height: 100%;
 }
 
 .header {
@@ -54,7 +54,7 @@
     padding-right: 10px;*/
     padding-bottom: 10px;
     position: absolute;
-    width: 100%;
+    width: 785px;
     z-index: 0;
 }
 

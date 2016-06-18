@@ -1057,6 +1057,24 @@ namespace WCS_eCommerce {
         protected global::System.Web.UI.WebControls.TextBox qty_residentEvil;
         
         /// <summary>
+        /// totalDue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label totalDue;
+        
+        /// <summary>
+        /// validator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator validator;
+        
+        /// <summary>
         /// btnCalculate control.
         /// </summary>
         /// <remarks>
@@ -1066,6 +1084,15 @@ namespace WCS_eCommerce {
         protected global::System.Web.UI.WebControls.Button btnCalculate;
         
         /// <summary>
+        /// paymentOption control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList paymentOption;
+        
+        /// <summary>
         /// btnOrder control.
         /// </summary>
         /// <remarks>
@@ -1073,14 +1100,5 @@ namespace WCS_eCommerce {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnOrder;
-        
-        /// <summary>
-        /// totalDue control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label totalDue;
     }
 }

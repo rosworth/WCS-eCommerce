@@ -2,29 +2,37 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
-        #btnPlace {
-            position: relative;
-            left: 30em;
-            width: 135px;
-        }
-
         .tableFloat {
-            float: left;
+            width: 675px;
         }
 
         .totalDiv {
             width: 100px;
+            position: absolute;
+            left: 675px;
+            top: 20px;
+        }
+
+        .auto-style1 {
+            width: 675px;
+            clear: both;
+        }
+
+        .controls {
+            border-collapse: separate;
+            border-spacing: 5px;
+            width: 675px;
         }
     </style>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="cph2" runat="server">
     <div class="tableFloat">
-        <asp:Table ID="Table1" runat="server">
+        <asp:Table ID="Table1" runat="server" Width="675px">
             <asp:TableHeaderRow>
-                <asp:TableHeaderCell Font-Bold="true" Width="150px">Item</asp:TableHeaderCell>
-                <asp:TableHeaderCell Font-Bold="true" Width="150px">Color</asp:TableHeaderCell>
-                <asp:TableHeaderCell Font-Bold="true" Width="150px">Size</asp:TableHeaderCell>
-                <asp:TableHeaderCell Font-Bold="true" Width="150px">Quantity</asp:TableHeaderCell>
+                <asp:TableHeaderCell HorizontalAlign="Center" Font-Bold="true" Width="25%">Item</asp:TableHeaderCell>
+                <asp:TableHeaderCell HorizontalAlign="Center" Font-Bold="true" Width="25%">Color</asp:TableHeaderCell>
+                <asp:TableHeaderCell HorizontalAlign="Center" Font-Bold="true" Width="25%">Size</asp:TableHeaderCell>
+                <asp:TableHeaderCell HorizontalAlign="Center" Font-Bold="true" Width="25%">Quantity</asp:TableHeaderCell>
             </asp:TableHeaderRow>
             <asp:TableRow ID="americanDad" Visible="false" VerticalAlign="Middle" Height="75px">
                 <asp:TableCell>
@@ -51,7 +59,7 @@
                     <asp:Label ID="size_boondocks" runat="server"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="qty_boondocks" runat="server" TextMode="Number" Width="50"></asp:TextBox>
+                    <asp:TextBox ID="qty_boondocks" runat="server" TextMode="SingleLine" Width="50"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="familyGuy" Visible="false" VerticalAlign="Middle">
@@ -65,7 +73,7 @@
                     <asp:Label ID="size_familyGuy" runat="server"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="qty_familyGuy" runat="server" TextMode="Number" Width="50"></asp:TextBox>
+                    <asp:TextBox ID="qty_familyGuy" runat="server" TextMode="SingleLine" Width="50"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="southPark" Visible="false" VerticalAlign="Middle">
@@ -79,7 +87,7 @@
                     <asp:Label ID="size_southPark" runat="server"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="qty_southPark" runat="server" TextMode="Number" Width="50"></asp:TextBox>
+                    <asp:TextBox ID="qty_southPark" runat="server" TextMode="SingleLine" Width="50"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="chicago" Visible="false" VerticalAlign="Middle">
@@ -93,7 +101,7 @@
                     <asp:Label ID="size_chicago" runat="server"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="qty_chicago" runat="server" TextMode="Number" Width="50"></asp:TextBox>
+                    <asp:TextBox ID="qty_chicago" runat="server" TextMode="SingleLine" Width="50"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="houston" Visible="false" VerticalAlign="Middle">
@@ -107,7 +115,7 @@
                     <asp:Label ID="size_houston" runat="server"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="qty_houston" runat="server" TextMode="Number" Width="50"></asp:TextBox>
+                    <asp:TextBox ID="qty_houston" runat="server" TextMode="SingleLine" Width="50"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="la" Visible="false" VerticalAlign="Middle">
@@ -121,7 +129,7 @@
                     <asp:Label ID="size_la" runat="server"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="qty_la" runat="server" TextMode="Number" Width="50"></asp:TextBox>
+                    <asp:TextBox ID="qty_la" runat="server" TextMode="SingleLine" Width="50"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="miami" Visible="false" VerticalAlign="Middle">
@@ -135,7 +143,7 @@
                     <asp:Label ID="size_miami" runat="server"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="qty_miami" runat="server" TextMode="Number" Width="50"></asp:TextBox>
+                    <asp:TextBox ID="qty_miami" runat="server" TextMode="SingleLine" Width="50"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="ny" Visible="false" VerticalAlign="Middle">
@@ -149,7 +157,7 @@
                     <asp:Label ID="size_ny" runat="server"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="qty_ny" runat="server" TextMode="Number" Width="50"></asp:TextBox>
+                    <asp:TextBox ID="qty_ny" runat="server" TextMode="SingleLine" Width="50"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="classics" Visible="false" VerticalAlign="Middle">
@@ -163,7 +171,7 @@
                     <asp:Label ID="size_classics" runat="server"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="qty_classics" runat="server" TextMode="Number" Width="50"></asp:TextBox>
+                    <asp:TextBox ID="qty_classics" runat="server" TextMode="SingleLine" Width="50"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="cobra" Visible="false" VerticalAlign="Middle">
@@ -177,7 +185,7 @@
                     <asp:Label ID="size_cobra" runat="server"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="qty_cobra" runat="server" TextMode="Number" Width="50"></asp:TextBox>
+                    <asp:TextBox ID="qty_cobra" runat="server" TextMode="SingleLine" Width="50"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="deuce" Visible="false" VerticalAlign="Middle">
@@ -191,7 +199,7 @@
                     <asp:Label ID="size_deuce" runat="server"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="qty_deuce" runat="server" TextMode="Number" Width="50"></asp:TextBox>
+                    <asp:TextBox ID="qty_deuce" runat="server" TextMode="SingleLine" Width="50"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="notOld" Visible="false" VerticalAlign="Middle">
@@ -205,7 +213,7 @@
                     <asp:Label ID="size_notOld" runat="server"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="qty_notOld" runat="server" TextMode="Number" Width="50"></asp:TextBox>
+                    <asp:TextBox ID="qty_notOld" runat="server" TextMode="SingleLine" Width="50"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="challenge" Visible="false" VerticalAlign="Middle">
@@ -219,7 +227,7 @@
                     <asp:Label ID="size_challenge" runat="server"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="qty_challenge" runat="server" TextMode="Number" Width="50"></asp:TextBox>
+                    <asp:TextBox ID="qty_challenge" runat="server" TextMode="SingleLine" Width="50"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="confusion" Visible="false" VerticalAlign="Middle">
@@ -233,7 +241,7 @@
                     <asp:Label ID="size_confusion" runat="server"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="qty_confusion" runat="server" TextMode="Number" Width="50"></asp:TextBox>
+                    <asp:TextBox ID="qty_confusion" runat="server" TextMode="SingleLine" Width="50"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="freeShirt" Visible="false" VerticalAlign="Middle">
@@ -247,7 +255,7 @@
                     <asp:Label ID="size_freeShirt" runat="server"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="qty_freeShirt" runat="server" TextMode="Number" Width="50"></asp:TextBox>
+                    <asp:TextBox ID="qty_freeShirt" runat="server" TextMode="SingleLine" Width="50"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="harlemShake" Visible="false" VerticalAlign="Middle">
@@ -261,7 +269,7 @@
                     <asp:Label ID="size_harlemShake" runat="server"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="qty_harlemShake" runat="server" TextMode="Number" Width="50"></asp:TextBox>
+                    <asp:TextBox ID="qty_harlemShake" runat="server" TextMode="SingleLine" Width="50"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="nike" Visible="false" VerticalAlign="Middle">
@@ -275,7 +283,7 @@
                     <asp:Label ID="size_nike" runat="server"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="qty_nike" runat="server" TextMode="Number" Width="50"></asp:TextBox>
+                    <asp:TextBox ID="qty_nike" runat="server" TextMode="SingleLine" Width="50"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="creed" Visible="false" VerticalAlign="Middle">
@@ -289,7 +297,7 @@
                     <asp:Label ID="size_creed" runat="server"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="qty_creed" runat="server" TextMode="Number" Width="50"></asp:TextBox>
+                    <asp:TextBox ID="qty_creed" runat="server" TextMode="SingleLine" Width="50"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="battlefield" Visible="false" VerticalAlign="Middle">
@@ -303,7 +311,7 @@
                     <asp:Label ID="size_battlefield" runat="server"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="qty_battlefield" runat="server" TextMode="Number" Width="50"></asp:TextBox>
+                    <asp:TextBox ID="qty_battlefield" runat="server" TextMode="SingleLine" Width="50"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="cod" Visible="false" VerticalAlign="Middle">
@@ -317,7 +325,7 @@
                     <asp:Label ID="size_cod" runat="server"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="qty_cod" runat="server" TextMode="Number" Width="50"></asp:TextBox>
+                    <asp:TextBox ID="qty_cod" runat="server" TextMode="SingleLine" Width="50"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="division" Visible="false" VerticalAlign="Middle">
@@ -331,7 +339,7 @@
                     <asp:Label ID="size_division" runat="server"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="qty_division" runat="server" TextMode="Number" Width="50"></asp:TextBox>
+                    <asp:TextBox ID="qty_division" runat="server" TextMode="SingleLine" Width="50"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="residentEvil" Visible="false" VerticalAlign="Middle">
@@ -345,20 +353,42 @@
                     <asp:Label ID="size_residentEvil" runat="server"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="qty_residentEvil" runat="server" TextMode="Number" Width="50"></asp:TextBox>
+                    <asp:TextBox ID="qty_residentEvil" runat="server" TextMode="SingleLine" Width="50"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
-
         </asp:Table>
         <br />
-        <div id="btnPlace">
-            <asp:Button ID="btnCalculate" runat="server" Text="Calculate Total" OnClick="btnCalculate_Click" Width="135px" />
-            <asp:Button ID="btnOrder" runat="server" Text="Place Order" OnClick="btnOrder_Click" Width="135px" />
-        </div>
     </div>
     <div class="totalDiv">
         Total:
         <br />
         <asp:Label ID="totalDue" runat="server"></asp:Label>
+    </div>
+    <div class="auto-style1">
+        <table class="controls">
+            <tr>
+                <td style="width: 75%;">
+                    <asp:RegularExpressionValidator ID="validator" runat="server" ErrorMessage="Enter a valid number" ValidationExpression="^([1-9]|[1-9]\d|100)$" ValidationGroup="checkNumber"></asp:RegularExpressionValidator>
+                </td>
+                <td style="width: 75%; text-align: right;">Payment Type</td>
+                <td style="text-align: right">
+                    <asp:Button ID="btnCalculate" runat="server" Text="Calculate Total" OnClick="btnCalculate_Click" Width="135px" />
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right">&nbsp;</td>
+                <td style="text-align: right">
+                    <asp:DropDownList ID="paymentOption" runat="server">
+                        <asp:ListItem Value="Cash">Cash</asp:ListItem>
+                        <asp:ListItem>Credit Card</asp:ListItem>
+                        <asp:ListItem>Money Order</asp:ListItem>
+                        <asp:ListItem>PayPal</asp:ListItem>
+                    </asp:DropDownList>
+                </td>
+                <td style="text-align: right">
+                    <asp:Button ID="btnOrder" runat="server" Text="Place Order" OnClick="btnOrder_Click" Width="135px" />
+                </td>
+            </tr>
+        </table>
     </div>
 </asp:Content>

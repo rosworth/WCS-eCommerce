@@ -35,7 +35,7 @@
     </asp:Panel>
     <hr />
     <asp:Panel runat="server" DefaultButton="btnRegister">
-        <table class="table-300px">
+        <table>
             <tr>
                 <td colspan="2">
                     <asp:Label ID="lblError" runat="server" Visible="False" Font-Bold="True" Font-Italic="False" ForeColor="Red"></asp:Label>

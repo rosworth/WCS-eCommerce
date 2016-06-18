@@ -1,4 +1,5 @@
-﻿using System.Data.OleDb;
+﻿using System;
+using System.Data.OleDb;
 using System.Net;
 
 namespace WCS_eCommerce
@@ -102,5 +103,39 @@ namespace WCS_eCommerce
             }
             return recordSaved;
         }
+
+        public static bool PlaceOrder(string database, string customerID, DateTime date, double deposit, int total, string payment, string status)
+        {
+            bool recordSaved;
+            OleDbTransaction myTransaction = null;
+            try
+            {
+                OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + database);
+                conn.Open();
+                string strSQL = "INSERT INTO order ([customerID], [dateTime], [deposit], [total], [payment], [status]) "
+                    + "VALUES (?, ?, ?, ?, ?, ?)";
+                OleDbCommand command = new OleDbCommand(strSQL, conn);
+                myTransaction = conn.BeginTransaction();
+                command.Transaction = myTransaction;
+                command.Parameters.AddWithValue("@customerID", customerID);
+                command.Parameters.AddWithValue("@dateTime", date);
+                command.Parameters.AddWithValue("@deposit", deposit);
+                command.Parameters.AddWithValue("@total", total);
+                command.Parameters.AddWithValue("@payment", payment);
+                command.Parameters.AddWithValue("@status", status);
+                command.ExecuteNonQuery();
+
+                myTransaction.Commit();
+                conn.Close();
+                recordSaved = true;
+            }
+            catch (WebException)
+            {
+                myTransaction.Rollback();
+                recordSaved = false;
+            }
+            return recordSaved;
+        }
+
     }
 }

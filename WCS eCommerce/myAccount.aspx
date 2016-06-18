@@ -5,29 +5,82 @@
 <asp:Content ContentPlaceHolderID="cph2" runat="server">
     Account Info
     <br />
-    <asp:GridView ID="accountGrid" runat="server" AutoGenerateColumns="False" DataSourceID="accountInfo" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" Width="550px">
-        <Columns>
-            <asp:BoundField DataField="firstName" HeaderText="First Name" SortExpression="firstName" >
-            <ControlStyle Width="75px" />
-            </asp:BoundField>
-            <asp:BoundField DataField="lastName" HeaderText="Last Name" SortExpression="lastName" >
-            <ControlStyle Width="75px" />
-            </asp:BoundField>
-            <asp:BoundField DataField="address1" HeaderText="Address 1" SortExpression="address1" />
-            <asp:BoundField DataField="address2" HeaderText="Address 2" SortExpression="address2" />
-            <asp:BoundField DataField="city" HeaderText="City" SortExpression="city" />
-            <asp:BoundField DataField="state" HeaderText="State" SortExpression="state" />
-            <asp:BoundField DataField="zip" HeaderText="Zip" SortExpression="zip" />
-        </Columns>
-        <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
-        <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
-        <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
-        <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
-        <SortedAscendingCellStyle BackColor="#F7F7F7" />
-        <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
-        <SortedDescendingCellStyle BackColor="#E5E5E5" />
-        <SortedDescendingHeaderStyle BackColor="#242121" />
-    </asp:GridView>
+    <asp:FormView ID="FormView1" runat="server" DataSourceID="accountInfo">
+        <EditItemTemplate>
+            firstName:
+            <asp:TextBox ID="firstNameTextBox" runat="server" Text='<%# Bind("firstName") %>' />
+            <br />
+            lastName:
+            <asp:TextBox ID="lastNameTextBox" runat="server" Text='<%# Bind("lastName") %>' />
+            <br />
+            address1:
+            <asp:TextBox ID="address1TextBox" runat="server" Text='<%# Bind("address1") %>' />
+            <br />
+            address2:
+            <asp:TextBox ID="address2TextBox" runat="server" Text='<%# Bind("address2") %>' />
+            <br />
+            city:
+            <asp:TextBox ID="cityTextBox" runat="server" Text='<%# Bind("city") %>' />
+            <br />
+            state:
+            <asp:TextBox ID="stateTextBox" runat="server" Text='<%# Bind("state") %>' />
+            <br />
+            zip:
+            <asp:TextBox ID="zipTextBox" runat="server" Text='<%# Bind("zip") %>' />
+            <br />
+            <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
+            &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+        </EditItemTemplate>
+        <InsertItemTemplate>
+            firstName:
+            <asp:TextBox ID="firstNameTextBox" runat="server" Text='<%# Bind("firstName") %>' />
+            <br />
+            lastName:
+            <asp:TextBox ID="lastNameTextBox" runat="server" Text='<%# Bind("lastName") %>' />
+            <br />
+            address1:
+            <asp:TextBox ID="address1TextBox" runat="server" Text='<%# Bind("address1") %>' />
+            <br />
+            address2:
+            <asp:TextBox ID="address2TextBox" runat="server" Text='<%# Bind("address2") %>' />
+            <br />
+            city:
+            <asp:TextBox ID="cityTextBox" runat="server" Text='<%# Bind("city") %>' />
+            <br />
+            state:
+            <asp:TextBox ID="stateTextBox" runat="server" Text='<%# Bind("state") %>' />
+            <br />
+            zip:
+            <asp:TextBox ID="zipTextBox" runat="server" Text='<%# Bind("zip") %>' />
+            <br />
+            <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
+            &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+        </InsertItemTemplate>
+        <ItemTemplate>
+            First Name:
+            <asp:Label ID="firstNameLabel" runat="server" Text='<%# Bind("firstName") %>' />
+            <br />
+            Last Name:
+            <asp:Label ID="lastNameLabel" runat="server" Text='<%# Bind("lastName") %>' />
+            <br />
+            Address 1:
+            <asp:Label ID="address1Label" runat="server" Text='<%# Bind("address1") %>' />
+            <br />
+            Address 2:
+            <asp:Label ID="address2Label" runat="server" Text='<%# Bind("address2") %>' />
+            <br />
+            City:
+            <asp:Label ID="cityLabel" runat="server" Text='<%# Bind("city") %>' />
+            <br />
+            State:
+            <asp:Label ID="stateLabel" runat="server" Text='<%# Bind("state") %>' />
+            <br />
+            Zip:
+            <asp:Label ID="zipLabel" runat="server" Text='<%# Bind("zip") %>' />
+            <br />
+
+        </ItemTemplate>
+    </asp:FormView>
     <br />
     Order History<br />
     <asp:GridView ID="ordersGrid" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="orders" GridLines="Horizontal" ForeColor="Black" Width="550px">
@@ -54,7 +107,7 @@
     </asp:SqlDataSource>
     <asp:SqlDataSource ID="accountInfo" runat="server" ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\WCS.accdb" ProviderName="System.Data.OleDb" SelectCommand="SELECT [firstName], [lastName], [address1], [address2], [city], [state], [zip] FROM [customerInfo] WHERE ([customerID] = ?)">
         <SelectParameters>
-            <asp:SessionParameter Name="customerID" SessionField="customerID" Type="Int32" />
+            <asp:SessionParameter Name="customerID" SessionField="customerID" Type="String" />
         </SelectParameters>
     </asp:SqlDataSource>
 

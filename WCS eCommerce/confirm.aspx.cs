@@ -1,17 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace WCS_eCommerce
 {
-    public partial class confirm : System.Web.UI.Page
+    public partial class confirm : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Request.QueryString["total"] != null)
+            {
+                totalDue.Text = Request.QueryString["total"];
+            }
+            if (Request.QueryString["payment"] != null)
+            {
+                paymentType.Text = Request.QueryString["payment"];
+            }
+            if (Request.QueryString["deposit"] == "0")
+            {
+                Page.FindControl("deposit").Visible = false;
+            }
+            else
+            {
+                depositAmt.Text = Request.QueryString["deposit"];
+            }
         }
     }
 }

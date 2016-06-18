@@ -122,6 +122,9 @@
     <Content Include="images\video games\small\resident-evil.png" />
     <Content Include="loading.gif" />
     <Content Include="MemesPage.aspx" />
+    <Content Include="new JS\jquery-1.8.3.min.js" />
+    <Content Include="new JS\jquery.elevateZoom-3.0.8.min.js" />
+    <Content Include="new JS\jquery.elevatezoom.js" />
     <Content Include="packages.config" />
     <Content Include="master.Master" />
     <Content Include="dsInfo.xsc">
@@ -157,6 +160,7 @@
     <Content Include="dsInfo.xss">
       <DependentUpon>dsInfo.xsd</DependentUpon>
     </Content>
+    <Content Include="new JS\elevatezoom.jquery.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -310,9 +314,7 @@
       <DependentUpon>VideoGamesPage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="new JS\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
