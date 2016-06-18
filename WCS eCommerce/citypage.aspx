@@ -45,7 +45,88 @@
         </div>
     </div>
     <img id="zoom_03" src="images/city/small/chicago.png" data-zoom-image="images/city/large/chicago.png" />
-
+    <div class="clear">
+        <table class="widthTable">
+            <tr>
+                <td class="boldFont">Chicago</td>
+                <td class="boldFont">Houston</td>
+                <td class="boldFont">Los Angeles</td>
+                <td class="boldFont">Miami</td>
+                <td class="boldFont">New York</td>
+                <td>Prices:</td>
+            </tr>
+            <tr>
+                <td>Color</td>
+                <td>Color</td>
+                <td>Color</td>
+                <td>Color</td>
+                <td>Color</td>
+                <td>
+                    <asp:Label ID="Label5" runat="server" BorderStyle="Double" Font-Bold="True" Font-Italic="True" ForeColor="Red" Text="XS - XL: $10"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:DropDownList ID="cityColor1" runat="server" DataSourceID="shirtColor" DataTextField="Color" DataValueField="Color">
+                    </asp:DropDownList>
+                </td>
+                <td class="auto-style1">
+                    <asp:DropDownList ID="cityColor2" runat="server" DataSourceID="shirtColor" DataTextField="Color" DataValueField="Color">
+                    </asp:DropDownList>
+                </td>
+                <td>
+                    <asp:DropDownList ID="cityColor3" runat="server" DataSourceID="shirtColor" DataTextField="Color" DataValueField="Color">
+                    </asp:DropDownList>
+                </td>
+                <td>
+                    <asp:DropDownList ID="cityColor4" runat="server" DataSourceID="shirtColor" DataTextField="Color" DataValueField="Color">
+                    </asp:DropDownList>
+                </td>
+                <td>
+                    <asp:DropDownList ID="cityColor5" runat="server" DataSourceID="shirtColor" DataTextField="Color" DataValueField="Color">
+                    </asp:DropDownList>
+                </td>
+                <td>
+                    <asp:Label ID="Label10" runat="server" BorderStyle="Double" Font-Bold="True" Font-Italic="True" ForeColor="Red" Text="2XL: $12"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td>Size</td>
+                <td>Size</td>
+                <td>Size</td>
+                <td>Size</td>
+                <td>Size</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:DropDownList ID="citySize1" runat="server" DataSourceID="shirtSize" DataTextField="size" DataValueField="size">
+                    </asp:DropDownList>
+                </td>
+                <td>
+                    <asp:DropDownList ID="citySize2" runat="server" DataSourceID="shirtSize" DataTextField="size" DataValueField="size">
+                    </asp:DropDownList>
+                </td>
+                <td>
+                    <asp:DropDownList ID="citySize3" runat="server" DataSourceID="shirtSize" DataTextField="size" DataValueField="size">
+                    </asp:DropDownList>
+                </td>
+                <td>
+                    <asp:DropDownList ID="citySize4" runat="server" DataSourceID="shirtSize" DataTextField="size" DataValueField="size">
+                    </asp:DropDownList>
+                </td>
+                <td>
+                    <asp:DropDownList ID="citySize5" runat="server" DataSourceID="shirtSize" DataTextField="size" DataValueField="size">
+                    </asp:DropDownList>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        <br />
+        <asp:Button ID="cartAdd" runat="server" Text="Add to Cart" OnClick="cartAdd_Click" />
+        <asp:SqlDataSource ID="shirtColor" runat="server" ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\WCS.accdb" ProviderName="System.Data.OleDb" SelectCommand="SELECT [Color] FROM [shirtColor]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="shirtSize" runat="server" ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\WCS.accdb" ProviderName="System.Data.OleDb" SelectCommand="SELECT [size] FROM [shirtSizes]"></asp:SqlDataSource>
+    </div>
     <script type="text/javascript">
         //initiate the plugin and pass the id of the div containing gallery images
         $("#zoom_03").elevateZoom({

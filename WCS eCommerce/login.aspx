@@ -5,13 +5,6 @@
         .table-300px {
             width: 300px;
         }
-        .auto-style1 {
-            width: 300px;
-            height: 27px;
-        }
-        .auto-style2 {
-            height: 27px;
-        }
     </style>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="cph2" runat="server">
@@ -28,8 +21,8 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style1">Password</td>
-                <td class="auto-style2">
+                <td class="table-300px">Password</td>
+                <td >
                     <asp:TextBox ID="txtLoginPassword" runat="server" TextMode="Password"></asp:TextBox>
                 </td>
             </tr>
@@ -42,7 +35,7 @@
     </asp:Panel>
     <hr />
     <asp:Panel runat="server" DefaultButton="btnRegister">
-        <table class="auto-style1">
+        <table class="table-300px">
             <tr>
                 <td colspan="2">
                     <asp:Label ID="lblError" runat="server" Visible="False" Font-Bold="True" Font-Italic="False" ForeColor="Red"></asp:Label>

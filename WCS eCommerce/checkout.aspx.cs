@@ -6,17 +6,13 @@ namespace WCS_eCommerce
 {
     public partial class checkout : System.Web.UI.Page
     {
-        #region Dictionary
         Dictionary<string, string> shirtColor = new Dictionary<string, string>();
         Dictionary<string, string> shirtSize = new Dictionary<string, string>();
-        #endregion
-
-        #region Variables
         int subTotal;
         static int total;
         string sVar = "";
         Label temp = new Label();
-        #endregion
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["shirtColors"] != null && Session["shirtSize"] != null)
@@ -47,9 +43,8 @@ namespace WCS_eCommerce
 
         protected void btnCalculate_Click(object sender, EventArgs e)
         {
-            if (Session["shirtColors"] != null && Session["shirtSize"] != null)
+            if (Session["shirtSize"] != null)
             {
-                Dictionary<string, string> shirtColor = ((Dictionary<string, string>)Session["shirtColors"]);
                 Dictionary<string, string> shirtSize = ((Dictionary<string, string>)Session["shirtSize"]);
                 foreach (KeyValuePair<string, string> entry in shirtSize)
                 {

@@ -14,7 +14,6 @@
         .active img {
             border: 2px solid #333 !important;
         }
-
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cph2" runat="server">
@@ -61,19 +60,19 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style1">
+                <td>
                     <asp:DropDownList ID="cartoonColor1" runat="server" DataSourceID="shirtColor" DataTextField="Color" DataValueField="Color">
                     </asp:DropDownList>
                 </td>
-                <td class="auto-style1">
+                <td>
                     <asp:DropDownList ID="cartoonColor2" runat="server" DataSourceID="shirtColor" DataTextField="Color" DataValueField="Color">
                     </asp:DropDownList>
                 </td>
-                <td class="auto-style1">
+                <td>
                     <asp:DropDownList ID="cartoonColor3" runat="server" DataSourceID="shirtColor" DataTextField="Color" DataValueField="Color">
                     </asp:DropDownList>
                 </td>
-                <td class="auto-style1">
+                <td>
                     <asp:DropDownList ID="cartoonColor4" runat="server" DataSourceID="shirtColor" DataTextField="Color" DataValueField="Color">
                     </asp:DropDownList>
                 </td>
@@ -89,19 +88,19 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style1">
+                <td>
                     <asp:DropDownList ID="cartoonSize1" runat="server" DataSourceID="shirtSize" DataTextField="size" DataValueField="size">
                     </asp:DropDownList>
                 </td>
-                <td class="auto-style1">
+                <td>
                     <asp:DropDownList ID="cartoonSize2" runat="server" DataSourceID="shirtSize" DataTextField="size" DataValueField="size">
                     </asp:DropDownList>
                 </td>
-                <td class="auto-style1">
+                <td>
                     <asp:DropDownList ID="cartoonSize3" runat="server" DataSourceID="shirtSize" DataTextField="size" DataValueField="size">
                     </asp:DropDownList>
                 </td>
-                <td class="auto-style1">
+                <td>
                     <asp:DropDownList ID="cartoonSize4" runat="server" DataSourceID="shirtSize" DataTextField="size" DataValueField="size">
                     </asp:DropDownList>
                 </td>
