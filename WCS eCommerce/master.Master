@@ -24,7 +24,7 @@
                 <div id="logo">
                     <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/logo/logo.png" PostBackUrl="~/default.aspx" />
                 </div>
-                <div id="alignR">
+                <div id="namePH">
                     <br />
                     <br />
                     <br />

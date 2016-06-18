@@ -8,10 +8,6 @@ namespace WCS_eCommerce
         {
             if (!IsPostBack && Session["loginStatus"] != null)
             {
-            //    Session["loginStatus"] = false;
-            //}
-            //else
-            //{
                 bool logged;
                 logged = Convert.ToBoolean(Session["loginStatus"]);
                 if (logged)

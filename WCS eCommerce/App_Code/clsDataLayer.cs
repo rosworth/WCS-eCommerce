@@ -1,6 +1,4 @@
-﻿using System;
-using System.Data;
-using System.Data.OleDb;
+﻿using System.Data.OleDb;
 using System.Net;
 
 namespace WCS_eCommerce
