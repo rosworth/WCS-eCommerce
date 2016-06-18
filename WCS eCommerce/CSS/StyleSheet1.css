@@ -154,3 +154,128 @@
         background: -ms-linear-gradient(top, #344f91, #65a9d7);
         background: -o-linear-gradient(top, #344f91, #65a9d7);
     }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    border: 0;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+table { /* tables still need 'cellspacing="0"' in the markup */
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+caption, th, td {
+    font-weight: normal;
+    text-align: left;
+    vertical-align: middle;
+}
+
+a img {
+    border: 0;
+}
+
+/* =Global
+----------------------------------------------- */
+
+body, input, textarea {
+    font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    line-height: 1.625;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    clear: both;
+}
+
+/* Text elements */
+p {
+    margin-bottom: 1.625em;
+}
+
+/* Forms */
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=number],
+textarea {
+    background: #fafafa;
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+    color: #888;
+}
+
+    input[type=text]:focus,
+    input[type=password]:focus,
+    input[type=email]:focus,
+    input[type=url]:focus,
+    input[type=number]:focus,
+    textarea:focus {
+        color: #373737;
+    }
+
+textarea {
+    padding-left: 3px;
+    width: 98%;
+}
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=number] {
+    padding: 3px;
+}
+
+/* Images */
+img[class*="align"],
+img[class*="wp-image-"],
+img[class*="attachment-"] {
+    height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+
+img.size-full,
+img.size-large {
+    max-width: 97.5%;
+    width: auto; /* Prevent stretching of full-size and large-size images with height and width attributes in IE8 */
+    height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+
+/* Image borders */
+img[class*="align"],
+img[class*="wp-image-"],
+#content .gallery .gallery-icon img { /* Add fancy borders to all WordPress-added images but not things like badges and icons and the like */
+    border: 1px solid #ddd;
+    padding: 6px;
+}
+
+a:focus img[class*="align"],
+a:hover img[class*="align"],
+a:active img[class*="align"],
+a:focus img[class*="wp-image-"],
+a:hover img[class*="wp-image-"],
+a:active img[class*="wp-image-"],
+#content .gallery .gallery-icon a:focus img,
+#content .gallery .gallery-icon a:hover img,
+#content .gallery .gallery-icon a:active img { /* Add some useful style to those fancy borders for linked images ... */
+    background: #eee;
+    border-color: #bbb;
+}

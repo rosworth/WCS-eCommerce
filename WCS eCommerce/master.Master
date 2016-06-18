@@ -6,12 +6,6 @@
 <head runat="server">
     <title>Wiliams Custom Specialty</title>
     <link href="CSS/StyleSheet1.css" rel="stylesheet" />
-    <link href="CSS/style.css" rel="stylesheet" />
-    <link href="CSS/default.css" rel="stylesheet" />
-    <link href="CSS/jquery-ui.css" rel="stylesheet" />
-    <link href="CSS/jquery.fancybox.css" rel="stylesheet" />
-    <link href="CSS/prism.css" rel="stylesheet" />
-    <link href="CSS/sharebar.css" rel="stylesheet" />
     <style type="text/css">
     </style>
 </head>

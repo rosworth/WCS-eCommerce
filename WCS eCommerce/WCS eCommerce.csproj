@@ -72,12 +72,6 @@
     <Content Include="CartoonsPage.aspx" />
     <Content Include="citypage.aspx" />
     <Content Include="ClassicCars.aspx" />
-    <Content Include="CSS\default.css" />
-    <Content Include="CSS\jquery-ui.css" />
-    <Content Include="CSS\jquery.fancybox.css" />
-    <Content Include="CSS\prism.css" />
-    <Content Include="CSS\sharebar.css" />
-    <Content Include="CSS\style.css" />
     <Content Include="images\cartoons\large\american dad.png" />
     <Content Include="images\city\large\chicago.png" />
     <Content Include="images\city\large\houston.png" />
