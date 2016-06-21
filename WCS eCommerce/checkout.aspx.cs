@@ -43,7 +43,7 @@ namespace WCS_eCommerce
             {
                 DateTime date = DateTime.Now;
                 double deposit = 0;
-                double.TryParse(totalDue.Text, out deposit)
+                double.TryParse(totalDue.Text, out deposit);
                 //if (paymentOption.SelectedIndex == 0)
                 //{
                 //    deposit = total / 10;
@@ -90,6 +90,7 @@ namespace WCS_eCommerce
             }
             sVar = String.Format("{0:c2}", total);
             totalDue.Text = sVar;
+            
         }
     }
 }
