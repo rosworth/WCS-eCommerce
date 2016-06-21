@@ -18,6 +18,8 @@ namespace WCS_eCommerce
         {
             if (Session["shirtColors"] != null && Session["shirtSize"] != null)
             {
+                validator.ControlToValidate = null;
+                Table1.FindControl("dummy").Visible = false;
                 Dictionary<string, string> shirtColor = ((Dictionary<string, string>)Session["shirtColors"]);
                 foreach (KeyValuePair<string, string> entry in shirtColor)
                 {

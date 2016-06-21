@@ -56,8 +56,11 @@ namespace WCS_eCommerce
                     shirtSizes.Add("ny", citySize5.SelectedValue);
                 }
             }
-            Session["shirtSize"] = shirtSizes;
-            Session["shirtColors"] = shirtColors;
+            if (shirtSizes.Count >= 1 && shirtColors.Count >= 1)
+            {
+                Session["shirtSize"] = shirtSizes;
+                Session["shirtColors"] = shirtColors;
+            }
             Response.Redirect("checkout.aspx");
         }
     }

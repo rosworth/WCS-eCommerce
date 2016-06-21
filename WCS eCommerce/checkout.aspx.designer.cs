@@ -1057,6 +1057,24 @@ namespace WCS_eCommerce {
         protected global::System.Web.UI.WebControls.TextBox qty_residentEvil;
         
         /// <summary>
+        /// dummy control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow dummy;
+        
+        /// <summary>
+        /// qty_dummy control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox qty_dummy;
+        
+        /// <summary>
         /// totalDue control.
         /// </summary>
         /// <remarks>

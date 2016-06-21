@@ -356,6 +356,15 @@
                     <asp:TextBox ID="qty_residentEvil" runat="server" TextMode="SingleLine" Width="50"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
+            <%--dummy row-will be invisible if cart is not empty--%>
+            <asp:TableRow ID="dummy" VerticalAlign="Middle">
+                <asp:TableCell ColumnSpan="3" HorizontalAlign="Center">
+                    Your cart is empty
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:TextBox ID="qty_dummy" runat="server" TextMode="SingleLine" Width="50" Visible="false"></asp:TextBox>
+                </asp:TableCell>
+            </asp:TableRow>
         </asp:Table>
         <br />
     </div>
@@ -368,7 +377,7 @@
         <table class="controls">
             <tr>
                 <td style="width: 75%;">
-                    <asp:RegularExpressionValidator ID="validator" runat="server" ErrorMessage="Enter a valid number" ValidationExpression="^([1-9]|[1-9]\d|100)$" ValidationGroup="checkNumber"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="validator" runat="server" ErrorMessage="Enter a valid number" ValidationExpression="^([1-9]|[1-9]\d|100)$" ValidationGroup="checkNumber" ControlToValidate="qty_dummy"></asp:RegularExpressionValidator>
                 </td>
                 <td style="width: 75%; text-align: right;">Payment Type</td>
                 <td style="text-align: right">

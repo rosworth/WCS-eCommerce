@@ -6,7 +6,7 @@ namespace WCS_eCommerce.Catalog_pages
     public partial class WebForm1 : System.Web.UI.Page
     {
         Dictionary<string, string> shirtColors;
-        Dictionary<string, string> shirtSizes ;
+        Dictionary<string, string> shirtSizes;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -48,8 +48,11 @@ namespace WCS_eCommerce.Catalog_pages
                     shirtSizes.Add("southPark", cartoonSize4.SelectedValue);
                 }
             }
-            Session["shirtSize"] = shirtSizes;
-            Session["shirtColors"] = shirtColors;
+            if (shirtSizes.Count >= 1 && shirtColors.Count >= 1)
+            {
+                Session["shirtSize"] = shirtSizes;
+                Session["shirtColors"] = shirtColors;
+            }
             Response.Redirect("checkout.aspx");
         }
     }

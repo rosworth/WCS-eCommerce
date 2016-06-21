@@ -41,8 +41,7 @@
             <asp:LinkButton ID="lnkbtnVGames" runat="server" PostBackUrl="~/VideoGamesPage.aspx">Video Games</asp:LinkButton>
             </td>
             <td class="centerText">
-                <asp:ImageButton ID="ImageButton7" runat="server" PostBackUrl="~/shirtMaker.aspx" />
-                <asp:LinkButton ID="lnkbtnCustom" runat="server" PostBackUrl="~/shirtMaker.aspx">MAKE A CUSTOM SHIRT HERE! =D</asp:LinkButton>
+                <asp:LinkButton ID="lnkbtnCustom" runat="server" PostBackUrl="~/shirtMaker.aspx">MAKE A CUSTOM SHIRT HERE!</asp:LinkButton>
             </td>
         </tr>
     </table>
