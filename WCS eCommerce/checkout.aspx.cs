@@ -43,10 +43,11 @@ namespace WCS_eCommerce
             {
                 DateTime date = DateTime.Now;
                 double deposit = 0;
-                if (paymentOption.SelectedIndex == 0)
-                {
-                    deposit = total / 10;
-                }
+                double.TryParse(totalDue.Text, out deposit)
+                //if (paymentOption.SelectedIndex == 0)
+                //{
+                //    deposit = total / 10;
+                //}
                 if (clsDataLayer.PlaceOrder(Server.MapPath(@"App_Data\WCS.accdb"), Session["customerID"].ToString(), date, deposit, total, paymentOption.SelectedValue, "Pending"))
                 {
                     Response.Redirect("confirm.aspx?total=" + totalDue.Text + "&payment=" + paymentOption.SelectedValue + "&deposit=" + deposit.ToString());

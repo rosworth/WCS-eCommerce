@@ -17,7 +17,7 @@ namespace WCS_eCommerce
             }
             if (Request.QueryString["deposit"] == "0")
             {
-                Page.FindControl("deposit").Visible = false;
+                deposit.Visible = false;
             }
             else
             {
