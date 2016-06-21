@@ -39,15 +39,16 @@ namespace WCS_eCommerce
 
         protected void btnOrder_Click(object sender, EventArgs e)
         {
+            btnCalculate_Click(sender, e);
             if (Convert.ToBoolean(Session["loginStatus"]))
             {
                 DateTime date = DateTime.Now;
                 double deposit = 0;
                 double.TryParse(totalDue.Text, out deposit);
-                //if (paymentOption.SelectedIndex == 0)
-                //{
-                //    deposit = total / 10;
-                //}
+                if (paymentOption.SelectedIndex == 0)
+                {
+                    deposit = total / 10;
+                }
                 if (clsDataLayer.PlaceOrder(Server.MapPath(@"App_Data\WCS.accdb"), Session["customerID"].ToString(), date, deposit, total, paymentOption.SelectedValue, "Pending"))
                 {
                     Response.Redirect("confirm.aspx?total=" + totalDue.Text + "&payment=" + paymentOption.SelectedValue + "&deposit=" + deposit.ToString());

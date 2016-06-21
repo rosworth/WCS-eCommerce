@@ -117,7 +117,7 @@ namespace WCS_eCommerce
                     try
                     {
                         strSQL = "INSERT INTO [order] ([customerID], [dateTime], [deposit], [total], [payment], [status]) "
-                            + "VALUES ('"+ customerID + "', '"+DateTime.Now+"', "+deposit+", "+total+", '"+payment+"', '"+status+"')";
+                            + "VALUES ('" + customerID + "', '" + date + "', " + deposit + ", " + total + ", '" + payment + "', '" + status + "')";
                         //+ "VALUES (?, ?, ?, ?, ?, ?)";
                         OleDbCommand command = new OleDbCommand(strSQL, conn);
                         myTransaction = conn.BeginTransaction();
@@ -134,7 +134,7 @@ namespace WCS_eCommerce
                         //command.Parameters.AddWithValue("@dateTime", date);
                         OleDbParameter p1 = new OleDbParameter();
                         p1.DbType = System.Data.DbType.DateTime;
-                        p1.Value = DateTime.Now;
+                        p1.Value = date;
                         p1.ParameterName = "@dateTime";
                         command.Parameters.Add(p1);
 
